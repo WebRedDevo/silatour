@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="stylesheet" href="css/style.css"><title>Правила провоза багажа в самолете</title></head><body><header class="header grid"><div class="header__left-side flex"><a class="logotype" href="/">Силатур</a><nav class="header__navigation"><ul class="header__menu flex"><li class="header__menu-item"><a href="video-page.html">Путеводители</a></li><li class="header__menu-item"><a href="fullstory.html">Журнал</a></li><li class="header__menu-item"><a href="travel-tip-page.html">Справочная</a></li></ul></nav></div><div class="header__right-side flex"><div class="wrap"><input id="light-mode" type="checkbox"> <label for="light-mode"></label> <button class="flex"><svg class="icon icon-menu"><use xlink:href="#icon-menu"></use></svg><span>Сервисы</span></button> <button class="flex"><svg class="icon icon-login"><use xlink:href="#icon-login"></use></svg><span>Войти</span></button></div></div></header><main class="main grid"><div class="speedbar"><span><a href="#">Главная</a>&nbsp;&nbsp;‒&nbsp;&nbsp; </span><span><a href="#">Журнал</a>&nbsp;&nbsp;‒&nbsp;&nbsp;</span><span><a href="#">Советы</a>&nbsp;&nbsp;‒&nbsp;&nbsp; </span><span>Правила провоза багажа в самолете</span></div><article class="travel-tip-page"><div class="initial-screen"><img src="images/travel-tip-page.jpg" alt=""><div class="container"><div class="initial-screen__info"><span class="category">Советы</span><h1>Правила провоза багажа в самолете</h1><p>Предвкушая увлекательный перелет в страну, выбранную для отпуска, многие туристы иной раз не знают об определенных правилах перевозки багажа.</p></div></div></div><div class="travel-tip-page__info container"><p>Большинство мировых авиакомпаний, руководствуясь соображениями безопасности, запрещает пассажирам самолетов проносить на борт множество разнообразных вещей. Чтобы избежать проблем при посадке на рейс, ознакомьтесь с этой статьей и заранее исключите все нежелательные предметы из багажа.</p><h2>Какие вещи запрещены для перевозки?</h2><p>Вы никуда не полетите, если в вашем багаже будет присутствовать хотя бы один из нижеперечисленных предметов:</p><h2>Какие вещи запрещены в ручной клади?</h2><p>На борту самолета также запрещено присутствие любых домашних животных: для них предназначен специальный отсек в багажном отделении. Кроме того, за перевозку питомца необходимо оплатить дополнительный сбор.</p></div></article></main><footer class="footer"></footer><script src="js/lib.js"></script><script>;( function( window, document )
+  {
+  	'use strict';
+
+  	var file     = 'images/svg/sprite.svg',
+  		revision = 1;
+
+  	if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
+  		return true;
+
+  	var isLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null,
+  		request,
+  		data,
+  		insertIT = function()
+  		{
+  			document.body.insertAdjacentHTML( 'afterbegin', data );
+  		},
+  		insert = function()
+  		{
+  			if( document.body ) insertIT();
+  			else document.addEventListener( 'DOMContentLoaded', insertIT );
+  		};
+
+  	if( isLocalStorage && localStorage.getItem( 'inlineSVGrev' ) == revision )
+  	{
+  		data = localStorage.getItem( 'inlineSVGdata' );
+  		if( data )
+  		{
+  			insert();
+  			return true;
+  		}
+  	}
+
+  	try
+  	{
+  		request = new XMLHttpRequest();
+  		request.open( 'GET', file, true );
+  		request.onload = function()
+  		{
+  			if( request.status >= 200 && request.status < 400 )
+  			{
+  				data = request.responseText;
+  				insert();
+  				if( isLocalStorage )
+  				{
+  					localStorage.setItem( 'inlineSVGdata',  data );
+  					localStorage.setItem( 'inlineSVGrev',   revision );
+  				}
+  			}
+  		}
+  		request.send();
+  	}
+  	catch( e ){}
+
+  }( window, document ) );</script><script>document.querySelector('.travel-tip-page .initial-screen__info').appendChild(document.querySelector('.speedbar'));
+      var
+  lightMode = document.getElementById('light-mode');
+
+
+
+
+// Переключатель Light Mode
+lightMode.addEventListener('change', function (){
+  if(lightMode.checked === true){
+    localStorage.setItem('lightMode','on');
+    document.querySelector('html').classList.add('night');
+  }else{
+    localStorage.setItem('lightMode','off');
+    document.querySelector('html').classList.remove('night');
+  }
+});
+
+if(localStorage.getItem('lightMode') === 'on'){
+  lightMode.checked = true;
+  document.querySelector('html').classList.add('night');
+}else{
+  document.querySelector('html').classList.remove('night');
+}</script></body></html>

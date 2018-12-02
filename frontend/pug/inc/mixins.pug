@@ -1,0 +1,11 @@
+mixin icon(name,mod)
+  - mod = mod || ''
+  svg(class="icon icon-" + name + ' ' + mod)
+      use(xlink:href="#icon-" + name)
+
+mixin video-short
+  article.video-short
+    .video-short__preview
+      img(src='images/video-short-1.jpg' alt='')
+      span.video-time 22:35
+    h4 Невероятная поездка в Германию

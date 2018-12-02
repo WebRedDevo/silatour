@@ -1,0 +1,25 @@
+include mixins.pug
+header.header.grid
+  .header__left-side.flex
+    a(href='/').logotype Силатур
+    nav.header__navigation
+      ul.header__menu.flex
+        li.header__menu-item
+          a(href='video-page.html') Путеводители
+        li.header__menu-item
+          a(href='fullstory.html') Журнал
+        li.header__menu-item
+          a(href='travel-tip-page.html') Справочная
+
+  .header__right-side.flex
+    .wrap
+      
+      input(id='light-mode' type='checkbox' )
+      label(for='light-mode')
+      button.flex
+        +icon('menu')
+        span Сервисы
+      button.flex
+        +icon('login')
+        span Войти 
+    

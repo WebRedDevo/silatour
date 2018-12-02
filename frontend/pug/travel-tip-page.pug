@@ -1,0 +1,39 @@
+doctype html
+html(lang='ru')
+  head
+    meta( charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover")
+    link( rel='stylesheet' href='css/style.css')
+    title Правила провоза багажа в самолете
+  body
+    include inc/header.pug
+    main.main.grid
+      .speedbar
+        span 
+          a(href='#') Главная
+          |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+        span
+          a(href='#') Журнал
+          |&nbsp;&nbsp;‒&nbsp;&nbsp;
+        span
+          a(href='#') Советы
+          |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+        span Правила провоза багажа в самолете 
+      article.travel-tip-page
+        .initial-screen
+          img(src='images/travel-tip-page.jpg' alt='')
+          .container
+            .initial-screen__info
+              span.category Советы
+              h1 Правила провоза багажа в самолете
+              p Предвкушая увлекательный перелет в страну, выбранную для отпуска, многие туристы иной раз не знают об определенных правилах перевозки багажа.
+        .travel-tip-page__info.container
+          p Большинство мировых авиакомпаний, руководствуясь соображениями безопасности, запрещает пассажирам самолетов проносить на борт множество разнообразных вещей. Чтобы избежать проблем при посадке на рейс, ознакомьтесь с этой статьей и заранее исключите все нежелательные предметы из багажа.
+          h2 Какие вещи запрещены для перевозки?
+          p Вы никуда не полетите, если в вашем багаже будет присутствовать хотя бы один из нижеперечисленных предметов:
+          h2 Какие вещи запрещены в ручной клади?
+          p На борту самолета также запрещено присутствие любых домашних животных: для них предназначен специальный отсек в багажном отделении. Кроме того, за перевозку питомца необходимо оплатить дополнительный сбор.
+    include inc/footer.pug
+    script
+      include scripts/travel-tip-page.js
+      include scripts/light-mode.js

@@ -1,0 +1,45 @@
+doctype html
+html(lang='ru')
+  head
+    meta( charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover")
+    link( rel='stylesheet' href='css/style.css')
+    title 7 самых интересных городов Германии, которые должен посетить каждый
+  body
+    include inc/header.pug
+    main.main.grid
+      .speedbar
+        span 
+          a(href='#') Главная
+          |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+        span
+          a(href='#') Видео
+          |&nbsp;&nbsp;‒&nbsp;&nbsp;
+        span
+          a(href='#') Влоги
+          |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+        span Кейси Нейстат путешествует 
+      article.video-page
+        .initial-screen
+          img(src='images/video-wall.jpg' alt='')
+          .container.flex
+            .video-info
+              h1 Кейси Нейстат путешествует
+              p Видеоблог о путешествиях от одного из самых крутых блогеров - Кейси Нейстата
+            .video-play
+              a(href='#').icon__play
+                +icon('play-arrow')
+        .all-video.container.flex
+          +video-short
+          +video-short
+          +video-short
+          +video-short
+          +video-short
+          +video-short
+          +video-short
+          +video-short
+            
+    include inc/footer.pug
+    script
+      include scripts/video-page.js
+      include scripts/light-mode.js

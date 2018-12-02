@@ -1,0 +1,81 @@
+.video-page
+  .initial-screen
+    position relative
+    h1
+      font-size 68px
+      line-height 68px
+      color var(--colorBlack)
+      position relative
+      margin-bottom 25px
+    p
+      position relative
+      color var(--colorBlack)
+      font-size 18px
+      line-height 24px
+    img
+      position absolute
+      height 100%
+      object-fit cover
+    .container
+      align-items center
+      justify-content space-between
+      padding 14% 10%
+
+.video-info
+
+  &:before
+    content ''
+    position absolute
+    left 0
+    right 0
+    top 0
+    bottom 0
+    background linear-gradient(to right, rgba(255,255,255,.88) 35%, rgba(51,51,51,.5) 65%)
+.video-play
+    display flex
+    justify-content center
+    align-items center
+    position relative
+    width 100%
+    .icon__play
+      border-radius 50%
+      width 200px
+      height 200px
+      background rgba(171, 255, 240, .9);
+      opacity .8
+      display flex
+      justify-content center
+      align-items center
+    .icon
+      fill #fff
+      width 80px
+      height 80px
+
+.all-video
+  flex-wrap wrap
+  padding-top 75px
+  margin-left -25px
+  margin-top -175px
+  position relative
+  background linear-gradient(to top,#fff 80%,rgba(255,255,255,0))
+.video-short
+  margin-left 25px
+  margin-bottom 25px
+  max-width calc(25% - 25px)
+  h4
+    font-weight 400
+    font-size 17px
+  .video-time
+    position absolute
+    right 10px
+    top 15px
+    background rgba(51,51,51, .8)
+    color #fff
+    padding: 1px 10px
+    border-radius 50px
+  &__preview
+    overflow hidden
+    height 185px
+    border-radius 5px
+    position relative
+    margin-bottom 7px

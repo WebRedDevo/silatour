@@ -1,0 +1,73 @@
+.header
+  position absolute
+  grid-template-columns: repeat(16, 1fr)
+  z-index 2
+  padding 15px 0px
+  width 100%
+  &__left-side
+    grid-column 1/10
+    align-items center
+    grid-template-columns: repeat(16, 1fr)
+    display grid
+    .header__menu
+      &-item
+        font-weight 300
+        font-size 18px
+        a
+          color var(--lightMode)
+          border-radius 50px
+          border 1px solid
+          padding 11px 18px
+          display block
+          margin 0 12px 0 0
+  &__right-side
+    grid-template-columns repeat(16,1fr)
+    display grid
+    grid-column 10/17
+    .wrap
+      grid-column: 1/16
+      display flex
+      align-items center
+      justify-content flex-end
+    .icon
+      height 17px
+      width: 17px
+      fill #fff
+      margin-right 8px
+    button
+      border-radius 50px
+      background 0
+      color #fff
+      padding 10px 25px
+      border 1px solid
+      margin-left 12px
+      align-items center
+    label
+      border-radius 50px
+      border 1px solid #fff
+      width 90px
+      height 45px
+      cursor pointer
+      margin-right 10px
+      &:before
+        content ''
+        height 45px
+        transform translateX(-10px)
+        width 45px
+        background #ffeb7c
+        border-radius 50%
+        display block
+        transition .55s
+  input
+    display none
+    &:checked + label
+        &:before
+          transform translateX(55px)
+          background #fff
+  .header__navigation
+    grid-column 7/16
+  .logotype
+    grid-column 2/6
+    font-family Debby
+    color var(--lightMode)
+    font-size 68px
