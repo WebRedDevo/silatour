@@ -1,0 +1,208 @@
+.country-page
+  .speedbar
+    margin-bottom: 80px;
+  .initial-screen
+    position relative
+    &:before
+      content ''
+      background rgba(54, 53, 21, 0.58)
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      z-index 1
+    img
+      position absolute
+    .container
+      padding 8% 5%
+      position relative
+      justify-content space-between
+      z-index 1
+    h1
+      font-size 90px
+      color #fff
+      font-weight 800
+      background rgba(0,0,0, .33)
+      padding 3px 19px 14px
+      border-radius 4px
+      display inline-block
+      margin 5px 0
+    p
+      color #fff
+      font-size 18px
+      margin 3px 0 28px
+      text-transform lowercase
+      font-family 'Qanelas-Regular'
+    &__info
+      max-width 65%
+      width 100%
+      .buttons
+        flex-wrap wrap
+        button
+          background #ffeb7c
+          color #2f2f2f
+          font-size 17px
+          line-height 15px
+          border 0
+          padding 15px 19px
+          margin-right 10px
+          border-radius 4px
+          font-family 'Qanelas-Regular'
+          margin-bottom 10px
+    &__map
+      position relative
+      .icon
+        fill rgba(255,255,255, .8)
+        width 600px
+        height 500px
+        transition .55s
+        &:hover
+          fill rgba(255,255,255, 1)
+          transform rotate(15deg) scale(1.1)
+
+
+
+.mini-info
+  .icon
+    width 75px
+    height 75px
+  a
+    color #fff
+    border 1px solid
+    padding 6px 11px
+    margin-left 8px
+    border-radius 3px
+    font-size 18px
+    position relative
+    bottom 25px
+
+
+
+.section
+  position relative
+  h2
+    font-size 46px
+    margin-bottom: 25px
+    color #333
+    font-weight: 800;
+  p
+    color #333
+    font-size: 19px
+    margin-bottom: 20px
+    line-height: 28px
+    font-family 'Qanelas-Regular'
+  .left-side
+    max-width: 50%;
+    align-items: center;
+
+  .right-side
+    width 50%
+  .left-line
+    flex-direction: column;
+    align-items: center;
+    margin-right: 60px
+    hr
+      height: 200px;
+      width: 4px;
+      margin: 25px 0;
+      background: #333;
+      border: 0;
+    span
+      color: #333
+
+.info-country
+  .left-side
+    padding: 100px 200px 100px 100px
+.geo-country
+  .left-side
+    position: sticky;
+    margin-top: 0
+    top 0
+    max-height: 100vh
+    width: 50%
+  .right-side
+    padding: 100px 200px 100px 100px
+  .left-line
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px
+    hr
+      height: 4px;
+      width:200px;
+      margin: 25px ;
+      background: #333;
+      border: 0;
+    span
+      color: #333
+
+.midle-side
+  max-width: 450px;
+  background: #000;
+  position: absolute;
+  height:52%;
+  left: 300px;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+  overflow hidden
+  border-radius: 5px 5px 0 0 ;
+  transition: .55s
+  &:hover
+    height: 100%
+    border-radius 0
+    overflow: auto;
+  ul
+    padding: 50px 100px
+  li
+    margin: 25px 0
+  h6
+    color #fff
+    font-size: 23px
+    font-weight: 600
+    margin-bottom: 4px
+
+  p
+    color #ccc
+    font-family 'Qanelas-Regular'
+    font-size: 20px
+
+
+// Раздел новости журнала
+
+.articles
+  position: relative;
+
+.article-news
+
+  img
+    position: absolute;
+  &:before
+    content ''
+    position: absolute;
+    background: rgba(0,0,0, .5)
+    left 0
+    right 0
+    top 0
+    bottom 0
+    z-index: 1
+
+.inforus
+    position: relative;
+    z-index: 2
+    max-width: 43%
+    padding: 100px
+    h3
+      color: #fff
+      font-size: 51px
+      line-height: 56px
+      font-weight: 700
+    p
+      color: #fff
+      margin: 20px 0
+    a
+      color #333
+      text-transform: uppercase;
+      padding: 15px 20px
+      background: #fff
+      font-size: 13px
