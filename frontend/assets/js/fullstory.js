@@ -5,6 +5,16 @@ var
   html = document.documentElement;
 
 
+document.getElementsByClassName('article-short-guidebook')[0].addEventListener('click', ggggg)
+
+function ggggg(){
+
+fetch('http://localhost:3000/country-page.html')
+  .then(res => res.json())
+  .then(posts => console.log(posts))
+
+
+
 fullContent.style.transform = 'translateY(' + -heightInitialScreen + 'px)'
 fullContent.style.marginBottom = -heightInitialScreen + 'px'
 document.querySelector('.fullstory__left-side .wrap').style.transform = 'translateY(' + -heightInitialScreen + 'px)'
