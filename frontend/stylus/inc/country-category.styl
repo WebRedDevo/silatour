@@ -1,0 +1,104 @@
+.category--country
+  .initial-screen
+    position: relative;
+    &:before
+      content ''
+      background rgba(54,53,21,.63)
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      z-index 1
+    img
+      position: absolute;
+  .flex
+    align-items: center;
+  .left-side
+    max-width: 50%
+    position: relative;
+    z-index: 2
+    padding:170px 50px 170px 340px
+  .right-side
+    max-width: 50%
+    position: relative;
+    z-index: 2
+    width: 100%;
+    margin: 170px 20% 170px 0;
+    border-left: 1px solid #fff;
+    padding-left: 50px;
+  h1
+    text-transform uppercase
+    color #fff
+    font-size: 100px
+    overflow-wrap break-word
+    font-weight: 800;
+
+    letter-spacing: 5px;
+    line-height: 100px
+  p
+    color #fff
+    font-family 'Qanelas-Regular'
+    font-size: 21px
+    margin-bottom: 50px
+    line-height: 39px
+  button
+    background #ffeb7c
+    color #2f2f2f
+    font-size 17px
+    line-height 15px
+    border 0
+    padding 15px 19px
+    margin-right 10px
+    border-radius 4px
+    font-family 'Qanelas-Regular'
+    margin-bottom 10px
+  .container
+    flex-wrap: wrap;
+    margin-top: 50px
+    padding: 0 340px
+
+.article-short-guidebook
+  margin: 0 10px 20px
+  max-width: calc(33% - 40px)
+  box-shadow: 0px 0px 10px rgba(0,0,0, .3)
+  border-radius: 7px
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  &:before
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(54, 53, 21, 0.55);
+  img
+    position: absolute;
+  &__header
+    position: relative;
+    bottom: 0;
+    z-index: 2;
+    padding: 160px 30px 50px
+    text-align: center;
+    .icon
+      width 45px
+      height 45px
+      position relative
+    span
+      font-size: 1.125rem;
+      padding: 6px 11px;
+      color: #fff;
+      border: 1px solid;
+      border-radius: 3px;
+      margin: 4px
+      display: inline-block;
+  h3
+    text-transform: uppercase;
+    color #fff
+    font-weight: 800
+    letter-spacing: 2px
+    font-size: 25px
+    margin-bottom: 15px

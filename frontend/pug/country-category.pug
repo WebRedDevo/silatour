@@ -1,0 +1,48 @@
+doctype html
+html(lang='ru')
+  head
+    meta( charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover")
+    link( rel='stylesheet' href='css/style.css')
+    title Правила провоза багажа в самолете
+  body
+    include inc/header.pug
+    main.main.category.category--country.grid
+      .speedbar
+        span 
+          a(href='#') Главная
+          |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+        span
+          a(href='#') Журнал
+          |&nbsp;&nbsp;‒&nbsp;&nbsp;
+        span
+          a(href='#') Советы
+          |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+        span Правила провоза багажа в самолете 
+      .initial-screen
+        img(src='images/norvigia-country.jpg' alt='').initial-screen__img
+        .flex
+          .left-side
+            h1 Страны 
+          .right-side
+            p Мы собрали 233 путеводителя, чтобы вам было удобно путешествовать и замечать больше интересных мест и деталей 
+            button Случайная страна 
+          
+      .container.flex
+        +article-short-guidebook('Норвегия')
+        +article-short-guidebook('Норвегия')
+        +article-short-guidebook('Норвегия')
+        +article-short-guidebook('Норвегия')
+        +article-short-guidebook('Норвегия')
+        +article-short-guidebook('Норвегия')
+        +article-short-guidebook('Норвегия')
+        +article-short-guidebook('Норвегия')
+
+
+      
+    include inc/footer.pug
+    script
+
+      include scripts/light-mode.js
+            
+            

@@ -16,16 +16,22 @@ html(lang='ru')
           a(href='#') Журнал
           |&nbsp;&nbsp;‒&nbsp;&nbsp;
         span
-          a(href='#') Советы
+          a(href='country-category.html') Советы
           |&nbsp;&nbsp;‒&nbsp;&nbsp; 
         span Правила провоза багажа в самолете 
       article.country-page
         .initial-screen
-          img(src='images/norvigia-country.jpg' alt='')
+          .num-part
+            span 
+              b 9 
+              |глав
+          img(src='images/norvigia-country.jpg' alt='').initial-screen__img
           .container.flex
             .initial-screen__info
+              button.close
+                +icon('cancel')
               .mini-info
-                +icon('norway-flag')
+                img(src='images/svg/flags/norway-flag.svg' alt='').icon
                 a(href='#') Европа
                 a(href='#') Шенген
               h1 Норвегия
@@ -96,12 +102,35 @@ html(lang='ru')
             .right-side
               img(src='images/norway-guidebook-1.jpg' alt='')
         section.section.articles
+          .navigtor
+            button.active Весь журнал
+            button Советы
+            button Статьи
           article.article-news
             img(src='images/norway-guidebook-2.jpg' alt='')
             .inforus
               h3 Куда сходить, если вы вдруг оказались в Осло?
               p Осло - это столица Норвегии с красивыми пляжами и парками, архитектурой 19-го века и прекрасными рыбными ресторанами. Осло находится всего в нескольких минутах езды от гор, где можно гулять летом и кататься на лыжах зимой. Итак, что же посетить в Осло, чтобы остались незабываемые впечатления?
               a(href='') Читать статью
+          .container-news.flex
+            article.articlys
+              img(src='images/norway-guidebook-1.jpg' alt='')
+              h3 Чем заняться в Норвегии: 7 идей для путешествия
+              
+            article.articlys.active
+              img(src='images/norway-guidebook-2.jpg' alt='')
+              h3 Чем заняться в Норвегии: 7 идей для путешествия
+              
+            article.articlys
+              img(src='images/norway-guidebook-1.jpg' alt='')
+              h3 Чем заняться в Норвегии: 7 идей для путешествия
+              
+            article.articlys
+              img(src='images/norway-guidebook-2.jpg' alt='')
+              h3 Чем заняться в Норвегии: 7 идей для путешествия
+      
+            
+            
         section.section.geo-country
           .flex
             .left-side
