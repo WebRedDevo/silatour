@@ -1,10 +1,7 @@
-var
-  lightMode = document.getElementById('light-mode');
+// checkbox Light Mode
 
+let lightMode = document.getElementById('light-mode');
 
-
-
-// Переключатель Light Mode
 lightMode.addEventListener('change', function (){
   if(lightMode.checked === true){
     localStorage.setItem('lightMode','on');

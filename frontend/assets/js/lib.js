@@ -1,3 +1,5 @@
-
-// Переносим speedbar
-document.querySelector('.fullstory__right-side .wrap .article-info').appendChild(document.querySelector('.speedbar'));
+if(document.querySelector('.close') !== null){
+  document.querySelector('.close').addEventListener('click', function(){
+    history.back();
+  })
+}
