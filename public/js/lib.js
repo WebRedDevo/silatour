@@ -55,6 +55,16 @@ if (typeof fullContent !== 'undefined') {
 if (document.querySelector('.close') !== null) {
   document.querySelector('.close').addEventListener('click', function () {
     history.back();
+    ajax.open('GET', location.href, false);
+    ajax.send(); // саксес распарс и пиас
+
+    if (ajax.readyState == 4 && ajax.status == 200) {
+      var doc = new DOMParser().parseFromString(ajax.responseText, "text/html");
+      containerMain.classList.add('category');
+      containerMain.classList.add('category--country');
+      containerMain.innerHTML = doc.querySelector('.main').innerHTML;
+      xeros();
+    }
   });
 }
 "use strict";
@@ -64,37 +74,53 @@ document.querySelector('.header').classList.add('white');
 
 // ajax web page rest in peace
 var ajax = new XMLHttpRequest();
+var containerMain = document.querySelector('.main');
 
-if (document.querySelector('.article-short-guidebook') !== null) {
-  var clickAjax = function clickAjax() {
-    window.scrollTo(0, 0);
-    history.pushState(null, this.getElementsByTagName('h3')[0].innerHTML, this.getElementsByTagName('a')[0].href);
-    document.querySelector('.main').classList.remove('category');
-    document.querySelector('.main').classList.remove('category--country');
-    ajax.open('GET', this.getElementsByTagName('a')[0].href, false);
-    ajax.send(); // саксес распарс и пиас
+function xeros() {
+  if (document.querySelector('.article-short-guidebook') !== null) {
+    var articleShortGuidebook = document.querySelectorAll('.article-short-guidebook');
 
-    if (ajax.readyState == 4 && ajax.status == 200) {
-      var doc = new DOMParser().parseFromString(ajax.responseText, "text/html");
-      document.querySelector('.main').innerHTML = doc.querySelector('.main').innerHTML;
+    var ajaxik = function ajaxik() {
+      var articleShortGuidebook = document.querySelectorAll('.article-short-guidebook');
+      ajax.open('GET', this.getElementsByTagName('a')[0].href, false);
+      ajax.send(); // саксес распарс и пиас
 
-      if (document.querySelector('.main .country-page') !== null) {
-        var miniInfo = document.querySelector('.mini-info');
-        var speedbar = document.querySelector('.speedbar');
-        document.querySelector('.initial-screen__info').insertBefore(speedbar, miniInfo);
-        document.querySelector('.close').addEventListener('click', function () {
-          history.back();
-        });
+      if (ajax.readyState == 4 && ajax.status == 200) {
+        var doc = new DOMParser().parseFromString(ajax.responseText, "text/html");
+        history.pushState(null, this.getElementsByTagName('h3')[0].innerHTML, this.getElementsByTagName('a')[0].href);
+        window.scrollTo(0, 0);
+        containerMain.classList.remove('category');
+        containerMain.classList.remove('category--country');
+        containerMain.innerHTML = doc.querySelector('.main').innerHTML; // обработка действий страны
+
+        if (document.querySelector('.main .country-page') !== null) {
+          var miniInfo = document.querySelector('.mini-info');
+          var speedbar = document.querySelector('.speedbar');
+          document.querySelector('.initial-screen__info').insertBefore(speedbar, miniInfo);
+          document.querySelector('.close').addEventListener('click', function () {
+            history.back();
+            ajax.open('GET', location.href, false);
+            ajax.send(); // саксес распарс и пиас
+
+            if (ajax.readyState == 4 && ajax.status == 200) {
+              var doc = new DOMParser().parseFromString(ajax.responseText, "text/html");
+              containerMain.classList.add('category');
+              containerMain.classList.add('category--country');
+              containerMain.innerHTML = doc.querySelector('.main').innerHTML;
+              xeros();
+            }
+          });
+        }
       }
+    };
+
+    for (var i = articleShortGuidebook.length; i--;) {
+      articleShortGuidebook[i].addEventListener('click', ajaxik);
     }
-  };
-
-  var articleShortGuidebook = document.querySelectorAll('.article-short-guidebook');
-
-  for (var i = articleShortGuidebook.length; i--;) {
-    articleShortGuidebook[i].addEventListener('click', clickAjax);
   }
 }
+
+xeros();
 "use strict";
 
 // replace speedbars into blocks for pages

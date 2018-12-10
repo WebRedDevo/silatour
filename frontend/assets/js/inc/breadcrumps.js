@@ -12,7 +12,7 @@ if(videoPage !== null) document.querySelector('.video-info').appendChild(speedba
 
 if(fullStory !== null) document.querySelector('.fullstory__right-side .wrap .article-info').appendChild(speedbar);
 
-if(countrypPage !== null ){
+if(countrypPage!== null){
   var miniInfo = document.querySelector('.mini-info');
   document.querySelector('.initial-screen__info').insertBefore(speedbar, miniInfo );
 }

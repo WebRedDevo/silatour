@@ -1,42 +1,54 @@
 // ajax web page rest in peace
-
 var ajax = new XMLHttpRequest();
+var containerMain = document.querySelector('.main');
+function xeros(){
 
-if(document.querySelector('.article-short-guidebook') !== null){
-  var articleShortGuidebook = document.querySelectorAll('.article-short-guidebook');
+  if(document.querySelector('.article-short-guidebook') !== null){
+    var articleShortGuidebook = document.querySelectorAll('.article-short-guidebook');
+    var ajaxik = function(){
+      var articleShortGuidebook = document.querySelectorAll('.article-short-guidebook');
+      ajax.open('GET', this.getElementsByTagName('a')[0].href ,false);
+      ajax.send();
 
+      // саксес распарс и пиас
+      if(ajax.readyState == 4 && ajax.status == 200){
+        var doc = new DOMParser().parseFromString(ajax.responseText, "text/html");
+        history.pushState(null,this.getElementsByTagName('h3')[0].innerHTML, this.getElementsByTagName('a')[0].href);
+        window.scrollTo(0,0);
+        containerMain.classList.remove('category');
+        containerMain.classList.remove('category--country');
+        containerMain.innerHTML = doc.querySelector('.main').innerHTML;
 
-    for(var i = articleShortGuidebook.length; i--;){
-      articleShortGuidebook[i].addEventListener('click', clickAjax)
-    }
+        // обработка действий страны
+        if(document.querySelector('.main .country-page') !== null ){
+          var miniInfo = document.querySelector('.mini-info');
+          var speedbar = document.querySelector('.speedbar');
+          document.querySelector('.initial-screen__info').insertBefore(speedbar, miniInfo );
 
-  function clickAjax(){
-    window.scrollTo(0,0);
-    history.pushState(null,this.getElementsByTagName('h3')[0].innerHTML, this.getElementsByTagName('a')[0].href);
+          document.querySelector('.close').addEventListener('click', function(){
 
-    document.querySelector('.main').classList.remove('category');
-    document.querySelector('.main').classList.remove('category--country');
+            history.back();
+            
+            ajax.open('GET', location.href ,false);
+            ajax.send();
+            // саксес распарс и пиас
+            if(ajax.readyState == 4 && ajax.status == 200){
 
-    ajax.open('GET', this.getElementsByTagName('a')[0].href ,false);
-    ajax.send();
-
-    // саксес распарс и пиас
-    if(ajax.readyState == 4 && ajax.status == 200){
-
-      var doc = new DOMParser().parseFromString(ajax.responseText, "text/html");
-
-      document.querySelector('.main').innerHTML = doc.querySelector('.main').innerHTML;
-
-      if(document.querySelector('.main .country-page') !== null ){
-
-        var miniInfo = document.querySelector('.mini-info');
-        var speedbar = document.querySelector('.speedbar');
-        document.querySelector('.initial-screen__info').insertBefore(speedbar, miniInfo );
-        document.querySelector('.close').addEventListener('click', function(){
-          history.back();
-        })
-
+              var doc = new DOMParser().parseFromString(ajax.responseText, "text/html");
+              containerMain.classList.add('category');
+              containerMain.classList.add('category--country');
+              containerMain.innerHTML = doc.querySelector('.main').innerHTML;
+              xeros();
+            }
+          })
+        }
       }
+    };
+    for(var i = articleShortGuidebook.length; i--;){
+      articleShortGuidebook[i].addEventListener('click', ajaxik)
     }
+
   }
+
 }
+xeros();

@@ -26,6 +26,39 @@ $silatour-grdient = linear-gradient(to right, #43FFBA, #85FF8C)
       text-decoration underline
       color #fff
 
+// Навигация
+.navigation
+  width 100%
+  text-align center
+  margin 35px 0
+  span
+    font-size 36px
+    opacity 1
+  a
+    color #333
+    opacity .5
+    font-size 33px
+    margin 15px
+    &:hover
+      opacity 1
+    .icon
+      fill #333
+      opacity .2
+      transition .55s
+      &:hover
+        opacity 1
+  .right
+    transform: rotate(180deg)
+    right 0
+    position fixed
+    bottom 0
+  .left
+    left 0
+    position fixed
+    bottom 0
+
+
+
 @import 'inc/header.styl'
 
 @import 'inc/fullstory.styl'

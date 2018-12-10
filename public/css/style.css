@@ -91,6 +91,70 @@ img
     color: #fff;
 }
 
+.navigation
+{
+    width: 100%;
+    margin: 35px 0;
+
+    text-align: center;
+}
+
+.navigation span
+{
+    font-size: 2.25rem;
+
+    opacity: 1;
+}
+
+.navigation a
+{
+    font-size: 2.0625rem;
+
+    margin: 15px;
+
+    opacity: .5;
+    color: #333;
+}
+
+.navigation a:hover,
+.navigation a:focus
+{
+    opacity: 1;
+}
+
+.navigation a .icon
+{
+    transition: .55s;
+
+    opacity: .2;
+
+    fill: #333;
+}
+
+.navigation a .icon:hover,
+.navigation a .icon:focus
+{
+    opacity: 1;
+}
+
+.navigation .right
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    -webkit-transform: rotate(180deg);
+
+            transform: rotate(180deg);
+}
+
+.navigation .left
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
 .header
 {
     position: absolute;
@@ -1374,6 +1438,98 @@ aside .article-aside
     border: 0;
     border-radius: 4px;
     background: #ffeb7c;
+}
+
+.video-country
+{
+    padding: 75px;
+
+    background: #24292e;
+}
+
+.video-country .container
+{
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    border-radius: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.video-country .container:before
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+
+    background: rgba(0,0,0,.63);
+}
+
+.video-country .video__info
+{
+    position: relative;
+    z-index: 2;
+
+    padding: 250px 0;
+
+    text-align: center;
+}
+
+.video-country h2
+{
+    font-size: 1.25rem;
+
+    margin-bottom: 13px;
+
+    text-transform: uppercase;
+
+    color: #abfff0;
+
+    color: var(--silatourColor);
+}
+
+.video-country p
+{
+    font: 2.25rem 'Qanelas-Regular';
+
+    margin-bottom: 22px;
+
+    letter-spacing: 0.3125rem;
+    text-transform: uppercase;
+
+    color: #fff;
+}
+
+.video-country .play
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    padding: 30px;
+
+    border: 1px solid #fff;
+    border-radius: 50%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.video-country .icon
+{
+    fill: #fff;
 }
 
 .category--country .initial-screen

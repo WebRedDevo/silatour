@@ -3,7 +3,7 @@ html(lang='ru')
   head
     meta( charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover")
-    link( rel='stylesheet' href='css/style.min.css')
+    link( rel='stylesheet' href='css/style.css')
     title Правила провоза багажа в самолете
   body
     include inc/header.pug
@@ -37,7 +37,16 @@ html(lang='ru')
         +article-short-guidebook('Норвегия')
         +article-short-guidebook('Норвегия')
         +article-short-guidebook('Норвегия')
-
+        +article-short-guidebook('Норвегия')
+        .navigation
+          a(href='#')
+            +icon('slim-left','left')
+          a(href='#') 1
+          span 2
+          a(href='#') 3
+          a(href='#') 4
+          a(href='#')
+            +icon('slim-left','right')
 
       
     include inc/footer.pug
