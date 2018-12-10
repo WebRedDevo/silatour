@@ -87,6 +87,7 @@ function xeros() {
 
       if (ajax.readyState == 4 && ajax.status == 200) {
         var doc = new DOMParser().parseFromString(ajax.responseText, "text/html");
+        var locationHref = location.href;
         history.pushState(null, this.getElementsByTagName('h3')[0].innerHTML, this.getElementsByTagName('a')[0].href);
         window.scrollTo(0, 0);
         containerMain.classList.remove('category');
@@ -98,14 +99,14 @@ function xeros() {
           var speedbar = document.querySelector('.speedbar');
           document.querySelector('.initial-screen__info').insertBefore(speedbar, miniInfo);
           document.querySelector('.close').addEventListener('click', function () {
-            history.back();
-            ajax.open('GET', location.href, false);
+            ajax.open('GET', locationHref, false);
             ajax.send(); // саксес распарс и пиас
 
             if (ajax.readyState == 4 && ajax.status == 200) {
               var doc = new DOMParser().parseFromString(ajax.responseText, "text/html");
               containerMain.classList.add('category');
               containerMain.classList.add('category--country');
+              history.back();
               containerMain.innerHTML = doc.querySelector('.main').innerHTML;
               xeros();
             }

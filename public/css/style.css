@@ -158,7 +158,7 @@ img
 .header
 {
     position: absolute;
-    z-index: 2;
+    z-index: 9;
 
     width: 100%;
     padding: 15px 0;
@@ -1530,6 +1530,15 @@ aside .article-aside
 .video-country .icon
 {
     fill: #fff;
+}
+
+p a
+{
+    padding-bottom: 1px;
+
+    color: #fff;
+    border-bottom: 1px solid #abfff0;
+    border-bottom: 1px solid var(--silatourColor);
 }
 
 .category--country .initial-screen
