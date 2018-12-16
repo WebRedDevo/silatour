@@ -3,7 +3,7 @@ html(lang='ru')
   head
     meta( charset='utf-8')
     meta(name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover")
-    link( rel='stylesheet' href='css/style.css')
+    link( rel='stylesheet' href='css/style.min.css')
     title Правила провоза багажа в самолете
   body
     include inc/header.pug
@@ -24,6 +24,8 @@ html(lang='ru')
           img(src='images/travel-tip-page.jpg' alt='')
           .container
             .initial-screen__info
+              button.close
+                +icon('cancel')
               span.category Советы
               h1 Правила провоза багажа в самолете
               p Предвкушая увлекательный перелет в страну, выбранную для отпуска, многие туристы иной раз не знают об определенных правилах перевозки багажа.

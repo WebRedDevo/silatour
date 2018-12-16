@@ -1,0 +1,32 @@
+doctype html
+html(lang='ru')
+  head
+    meta( charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover")
+    link( rel='stylesheet' href='css/style.min.css')
+    title Главная
+  body
+    include inc/header.pug
+    main.main.grid
+      .main__initial-screen.flex.initial-screen
+        .left-side
+          img(src='images/main-initial-bg.jpg' alt='')
+          .wrap
+            h1 Начните свое путешествие с 
+              span Италии
+            p Это Европа и вам не нужна виза 
+            form.initial-screen__form.flex
+              input(type='text' placeholder='Италия').form__search
+              input(type='submit' id='search-button').form__button
+              label(for='search-button' )
+                +icon('right-arrow')
+            
+        .right-side.flex
+          +article-posts
+          +article-posts
+          +article-posts
+          +article-posts
+          +article-posts
+
+            
+    include inc/footer.pug

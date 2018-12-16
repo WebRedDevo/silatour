@@ -1,191 +1,91 @@
 .fullstory
-  grid-template-columns: repeat(16, 1fr)
-  position relative
-  overflow hidden
-  &:before
-    content ''
-    clip-path polygon(57.5% 0,57.5% 100%,0 100%,0 0)
-    background url(../images/fullstory-wallpaper.jpg) no-repeat
-    position absolute
-    width: 100%
-    height 100%
-    background-size cover
-    background-position 0
-    filter blur(15px)
-    z-index -1
-    left -20px
-  &__left-side
-    grid-column 1/10
-    background rgba(255, 255, 255, 0.75)
-    box-shadow: 5px 0 35px rgba(0,0,0,.6);
-    display grid
-    grid-template-columns repeat(16,1fr)
-    grid-auto-rows minmax(120px, auto)
-    .wrap
-      grid-column: 7/16
-      grid-row 3
-      padding-bottom 30%
-      h1
-        font-size: 47px
-        color var(--lightMode)
-        line-height 56px
-        font-family Qanelas
-        font-weight 800
-      .travel-buttons
-        margin 26px 0 14px
-        display flex
-        flex-wrap wrap
-      .button
-        padding 11px 25px 11px 65px
-        border-radius 50px
-        background var(--colorYellow)
-        border 1px solid var(--colorYellow)
-        color #333
-        box-shadow: 0px 2px 3px rgba(71, 71, 71, 0.37);
-        margin 0 12px 12px 0
-        align-items center
-        position relative
-        .icon
-          height 20px
-          width 20px
-          fill var(--colorYellow)
-        &__icon
-          background #333
-          border-radius 50%
-          padding 12px
-          height 45px
-          width 45px
-          margin-right 10px
-          left 0
-          transform scale(1.14)
-          position absolute
-
-      p
-        color var(--lightMode)
-        line-height 33px
-        font-size 21px
-        font-weight 300
-  &__right-side
-    grid-column 10/17
-    background rgba(54, 53, 21, 0.45)
-    display grid
-    grid-template-columns repeat(16,1fr)
-    .wrap
-      grid-column 2/10
-      position relative
-      grid-template-rows repeat(auto-fill,120px)
-      display grid
-    .close
-      grid-row 2
-      background 0
-      border 0
+  .initial-screen
+    position relative
+    &:hover
+      img
+        filter blur(2px)
+    &__info
+      position: relative;
+      z-index: 1;
+      padding: 17% 0
+      max-width: 950px;
+      text-align: left;
+      margin 0 auto
+    &:before
+      content ''
       position absolute
+      left 0
       right 0
-      top 45px
-      .icon
-        fill #fff
-        height 50px
-        width 50px
-    .expand
-      grid-row 3
-      background 0
-      border 0
+      top 0
+      bottom 0
+      background rgba(0,0,0, .58)
+      z-index 1
+    &:after
+      content ''
       position absolute
+      left 0
       right 0
-      .icon
-        fill #fff
-        height 50px
-        width 50px
-    .article-info
-      grid-row 3
-      h6
-        line-height 39px
-        font-size 41px
-        color #fff
-        text-decoration none
-        width min-content
-        font-weight 200
-        text-transform uppercase
-        margin-bottom 45px
-        span
-          font-weight 900
-      .info__item
-        font-size 20px
-        color #fff
-        margin 13px 0
-        display flex
-        align-items center
-        a
-          color: #fff
-          padding-bottom 1px
-          border-bottom 1px solid
-        .icon
-          height 25px
-          width 25px
-          fill #fff
-          margin-right 11px
-      .speedbar
-        position absolute
-        bottom 50px
-  img
-    position absolute
-    z-index -2
-    height 100%
-    object-fit cover
-.fullstory__content
-  position relative
-  z-index 99
-  grid-template-columns: repeat(16, 1fr)
-  background #fff
-  .full-content
-    grid-column 1/10
-    display grid
-    grid-template-columns repeat(16, 1fr)
-    background #fff
-
-    h2
-      font-size 35px
-      color var(--colorBlack)
-      grid-column 7/16
-      margin 15px 0
+      bottom -4px
+      height 29%
+      background linear-gradient(to top, rgba(255,255,255, 1), rgba(255,255,255, 0) )
+      z-index 1
     img
-      grid-column 7/17
-    p
-      grid-column 7/16
-      line-height 30px
+      position absolute
+      transition .55s
+    .category
+      text-transform uppercase
+      color var(--silatourColor)
+      font-size 20px
+      letter-spacing 3px
+      font-weight 500
+      margin-bottom 20px
+    h1
+      font-size 60px
+      color #fff
+      margin-bottom: 40px;
+      margin-top 20px
+      line-height 70px
+      margin-right: 100px
+      position relative
+    .speedbar
+      margin-top 90px
+  &__content
+    background #fff
+    max-width: 650px;
+    border-radius: 0;
+    position relative
+    z-index 1
+    border-radius: 5px;
+    padding 50px
+    p,a
       font-size 19px
-      color var(--colorBlack)
-      font-weight 300
-      margin 10px 0
-    .quote
-      margin 10px 0
-      grid-column 7/17
-      padding 35px
-      border 6px solid #333
-      p
-        margin 0
-aside
-  grid-column 10/17
-  padding-left 50px
-  .article-aside
-    height max-content
-    position sticky
-    top 0
-.aside__navigation
-  h2
-    margin 15px 0
-    font-size 54px
-    text-transform uppercase
-    letter-spacing 13px
-    font-weight 800
-    color var(--colorBlack)
-  .menu__item
-    font-size 28px
-    text-transform uppercase
-    font-weight 300
-    padding 5px 0
-    &.active
-      a
-        border-bottom 3px solid #31cfce
-    a
-      color var(--colorBlack)
+      line-height 28px
+      color #333
+      margin-bottom 20px
+    h2
+      font-size 34px
+      color #333
+      margin-top 30px
+      margin-bottom 10px
+      line-height 42px
+    img
+      margin-bottom 15px
+      border-radius: 3px;
+
+.fullstory__aside
+  position sticky
+  top 0
+  height max-height
+  width 100%
+  max-width 300px
+  .article-short-guidebook
+    max-width: 100%;
+    border-radius 0
+    border-radius: 5px;
+
+.fullstory__container
+  max-width: 950px;
+  margin: -200px auto;
+  z-index: 1;
+  position: relative;
+  align-items: flex-start;

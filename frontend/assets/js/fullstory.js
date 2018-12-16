@@ -1,4 +1,4 @@
-'use strict';
+
 var
   heightInitialScreen = document.querySelector('.initial-screen').offsetHeight ,
   html = document.documentElement;

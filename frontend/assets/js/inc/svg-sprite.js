@@ -1,6 +1,5 @@
 ;( function( window, document )
   {
-  	'use strict';
     // /templates/silatour-beta-1-0/images/svg/sprite.svg
   	var file     = 'images/svg/sprite.svg',
   		revision = 1;
