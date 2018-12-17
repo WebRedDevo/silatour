@@ -7,43 +7,54 @@ html(lang='ru')
     title Главная
   body
     include inc/header.pug
-    main.main.grid
-      .main__initial-screen.flex.initial-screen
-        .left-side.flex
-          .wrap
-            h1 Начните путешествие сегодня
-            p Это Европа и вам не нужна виза 
-            form.initial-screen__form.flex
-              input(type='text' placeholder='Италия').form__search
-              input(type='submit' id='search-button').form__button
-              label(for='search-button' )
-                +icon('right-arrow')
-        
-            
-        .right-side.flex
-          .right-side__heading.flex
-            +icon('fire')
-            h2 Важные новости
-          +article-posts
-          +article-posts
-          +article-posts
-          +article-posts
-          +article-posts
+    main.main
+      .initial-screen
+        aside.main__aside.flex
+          ul.main__aside-list
+            li.aside-list__item.flex.active
+              +icon('fire')
+              h6 Куда поехать
+            li.aside-list__item.flex
+              +icon('login')
+              h6 Я знаю куда
+  
+        .main__travel-filter.flex.main-initial__tab.active
+          .travel-filter__img
+            a(href='country-page.html')
+              img(src='images/main-initial-bg.jpg' alt='')
+              .travel-filter__info.flex
+                .wrap
+                  span.areyou Вам подходит
+                  h2 Италия
+                  span.categorys Америка
+                  span.categorys Виза требуется 
+            button.fiter__button.fiter__button--left  
+              +icon('right-arrow')
+            button.fiter__button.fiter__button--right
+              +icon('right-arrow')
+          .travel-filter__settings
+            ul.filter-settings__list
+              li.filter-settings__list-item
+                h6 Визовый режим
+                span Без визы
+              li.filter-settings__list-item
+                h6 Тип поездки
+                span На море
+              li.filter-settings__list-item
+                h6 Где
+                span Европа
+                
+        .main__initial-screen.flex.main-initial__tab
+            .wrap
+              h1 Стран много - отпуск один
+              p Это Европа и вам не нужна виза 
+              form.initial-screen__form.flex
+                input(type='text' placeholder='Италия').form__search
+                input(type='submit' id='search-button').form__button
+                label(for='search-button' )
+                  +icon('right-arrow')
 
-      aside.main__aside.flex
-        ul.main__aside-list
-          li.aside-list__item.flex.active
-            +icon('fire')
-            h6 Путеводитель
-          li.aside-list__item.flex
-            +icon('login')
-            h6 Авиабилеты
-          li.aside-list__item.flex
-            +icon('plane')
-            h6 Отели
-          li.aside-list__item.flex
-            +icon('eye')
-            h6 Туры
+      
       
     
     include inc/footer.pug

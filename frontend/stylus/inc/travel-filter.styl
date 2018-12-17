@@ -1,0 +1,104 @@
+.main
+  &__travel-filter
+    padding-top 150px
+    width: 100%;
+    align-items center
+    justify-content space-around
+    padding 0 15%
+    h2
+      font-size 78px
+      color #fff
+      margin-top 25px
+      margin-bottom 5px
+.travel-filter
+  &__info
+    z-index 1
+    position absolute
+    top 0
+    bottom 0
+    left 0
+    right 0
+    margin auto
+    align-items center
+    justify-content center
+    .areyou
+      text-transform uppercase
+      letter-spacing 3px
+      font-size 18px
+      font-weight 300
+      color #fff
+    .categorys
+      font-size: 1.125rem;
+      padding: 6px 11px;
+      color: #fff
+      border: 1px solid;
+      border-radius: 3px;
+      margin: 4px
+      display: inline-block;
+    p
+      margin-left 5px
+      max-width 80%
+      color #333
+      margin-top 10px
+      font-size 18px
+      line-height 27px
+      font-weight 200
+  &__img
+    position relative
+    a
+      z-index 1
+      border-radius: 75% 30% 25% 75% / 50% 50% 50% 50%;
+      height 700px
+      width 700px
+      overflow hidden
+      position relative
+      display block
+      &:before
+        content ''
+        background rgba(0, 0, 0, 0.58)
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        z-index 1
+  &__settings
+    z-index 1
+.fiter__button
+  position absolute
+  top 0
+  bottom 0
+  margin auto
+  z-index 9
+  background 0
+  .icon
+    height 60px
+    width 60px
+    background #fff
+    box-shadow 0px 0px 20px rgba(0,0,0, .19)
+    background #fff
+    border-radius 50%
+    fill #333
+    padding 14px
+  &--right
+    right -20px
+  &--left
+    left -20px
+    transform rotate(180deg)
+.filter-settings
+  &__list-item
+    margin 25px
+    h6
+      color #333
+      font-size 20px
+      margin-bottom 10px
+    span
+      background #ffeb7c
+      color #2f2f2f
+      font-size 17px
+      line-height 15px
+      border 0
+      padding 10px 14px
+      border-radius 4px
+      font-family 'Qanelas-Regular'
+      display inline-block

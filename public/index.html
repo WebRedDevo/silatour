@@ -35,11 +35,59 @@
         </div>
       </div>
     </header>
-    <main class="main grid">
-      <div class="main__initial-screen flex initial-screen">
-        <div class="left-side flex">
+    <main class="main">
+      <div class="initial-screen">
+        <aside class="main__aside flex">
+          <ul class="main__aside-list">
+            <li class="aside-list__item flex active">
+                  <svg class="icon icon-fire ">
+                    <use xlink:href="#icon-fire"></use>
+                  </svg>
+              <h6>Куда поехать</h6>
+            </li>
+            <li class="aside-list__item flex">
+                  <svg class="icon icon-login ">
+                    <use xlink:href="#icon-login"></use>
+                  </svg>
+              <h6>Я знаю куда</h6>
+            </li>
+          </ul>
+        </aside>
+        <div class="main__travel-filter flex main-initial__tab active">
+          <div class="travel-filter__img"><a href="country-page.html"><img src="images/main-initial-bg.jpg" alt="">
+              <div class="travel-filter__info flex">
+                <div class="wrap"><span class="areyou">Вам подходит</span>
+                  <h2>Италия</h2><span class="categorys">Америка</span><span class="categorys">Виза требуется </span>
+                </div>
+              </div></a>
+            <button class="fiter__button fiter__button--left"> 
+                  <svg class="icon icon-right-arrow ">
+                    <use xlink:href="#icon-right-arrow"></use>
+                  </svg>
+            </button>
+            <button class="fiter__button fiter__button--right">
+                  <svg class="icon icon-right-arrow ">
+                    <use xlink:href="#icon-right-arrow"></use>
+                  </svg>
+            </button>
+          </div>
+          <div class="travel-filter__settings">
+            <ul class="filter-settings__list">
+              <li class="filter-settings__list-item">
+                <h6>Визовый режим</h6><span>Без визы</span>
+              </li>
+              <li class="filter-settings__list-item">
+                <h6>Тип поездки</h6><span>На море</span>
+              </li>
+              <li class="filter-settings__list-item">
+                <h6>Где</h6><span>Европа</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="main__initial-screen flex main-initial__tab">
           <div class="wrap">
-            <h1>Начните путешествие сегодня</h1>
+            <h1>Стран много - отпуск один</h1>
             <p>Это Европа и вам не нужна виза </p>
             <form class="initial-screen__form flex">
               <input class="form__search" type="text" placeholder="Италия">
@@ -52,103 +100,7 @@
             </form>
           </div>
         </div>
-        <div class="right-side flex">
-          <div class="right-side__heading flex">
-                <svg class="icon icon-fire ">
-                  <use xlink:href="#icon-fire"></use>
-                </svg>
-            <h2>Важные новости</h2>
-          </div>
-              <article class="article-posts"><a href="fullstory.html"><img src="images/full-content-1.jpg" alt="">
-                  <header class="article-posts__header">
-                    <div class="article-posts__categeory">Куда <span>поехать</span></div>
-                    <div class="article-posts__views flex"><span>1283</span>
-                          <svg class="icon icon-visibility ">
-                            <use xlink:href="#icon-visibility"></use>
-                          </svg>
-                    </div>
-                  </header>
-                  <footer class="article-posts__footer">
-                    <h3>2 авиабелета в германию туда-сюда за 999 руб </h3>
-                  </footer></a></article>
-              <article class="article-posts"><a href="fullstory.html"><img src="images/full-content-1.jpg" alt="">
-                  <header class="article-posts__header">
-                    <div class="article-posts__categeory">Куда <span>поехать</span></div>
-                    <div class="article-posts__views flex"><span>1283</span>
-                          <svg class="icon icon-visibility ">
-                            <use xlink:href="#icon-visibility"></use>
-                          </svg>
-                    </div>
-                  </header>
-                  <footer class="article-posts__footer">
-                    <h3>2 авиабелета в германию туда-сюда за 999 руб </h3>
-                  </footer></a></article>
-              <article class="article-posts"><a href="fullstory.html"><img src="images/full-content-1.jpg" alt="">
-                  <header class="article-posts__header">
-                    <div class="article-posts__categeory">Куда <span>поехать</span></div>
-                    <div class="article-posts__views flex"><span>1283</span>
-                          <svg class="icon icon-visibility ">
-                            <use xlink:href="#icon-visibility"></use>
-                          </svg>
-                    </div>
-                  </header>
-                  <footer class="article-posts__footer">
-                    <h3>2 авиабелета в германию туда-сюда за 999 руб </h3>
-                  </footer></a></article>
-              <article class="article-posts"><a href="fullstory.html"><img src="images/full-content-1.jpg" alt="">
-                  <header class="article-posts__header">
-                    <div class="article-posts__categeory">Куда <span>поехать</span></div>
-                    <div class="article-posts__views flex"><span>1283</span>
-                          <svg class="icon icon-visibility ">
-                            <use xlink:href="#icon-visibility"></use>
-                          </svg>
-                    </div>
-                  </header>
-                  <footer class="article-posts__footer">
-                    <h3>2 авиабелета в германию туда-сюда за 999 руб </h3>
-                  </footer></a></article>
-              <article class="article-posts"><a href="fullstory.html"><img src="images/full-content-1.jpg" alt="">
-                  <header class="article-posts__header">
-                    <div class="article-posts__categeory">Куда <span>поехать</span></div>
-                    <div class="article-posts__views flex"><span>1283</span>
-                          <svg class="icon icon-visibility ">
-                            <use xlink:href="#icon-visibility"></use>
-                          </svg>
-                    </div>
-                  </header>
-                  <footer class="article-posts__footer">
-                    <h3>2 авиабелета в германию туда-сюда за 999 руб </h3>
-                  </footer></a></article>
-        </div>
       </div>
-      <aside class="main__aside flex">
-        <ul class="main__aside-list">
-          <li class="aside-list__item flex active">
-                <svg class="icon icon-fire ">
-                  <use xlink:href="#icon-fire"></use>
-                </svg>
-            <h6>Путеводитель</h6>
-          </li>
-          <li class="aside-list__item flex">
-                <svg class="icon icon-login ">
-                  <use xlink:href="#icon-login"></use>
-                </svg>
-            <h6>Авиабилеты</h6>
-          </li>
-          <li class="aside-list__item flex">
-                <svg class="icon icon-plane ">
-                  <use xlink:href="#icon-plane"></use>
-                </svg>
-            <h6>Отели</h6>
-          </li>
-          <li class="aside-list__item flex">
-                <svg class="icon icon-eye ">
-                  <use xlink:href="#icon-eye"></use>
-                </svg>
-            <h6>Туры</h6>
-          </li>
-        </ul>
-      </aside>
     </main>
     <footer class="footer"></footer>
     <script src="js/lib.min.js"></script>

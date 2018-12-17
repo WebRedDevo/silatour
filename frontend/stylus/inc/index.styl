@@ -1,50 +1,68 @@
 .main
+  &-initial__tab
+    opacity 0
+    position absolute
+    top 0
+    transition .55s
+    &.active
+      opacity 1
+      position relative
+    &.white
+      .icon
+        fill #fff
+      h6
+        color #fff
   &__aside
-    position fixed
+    position absolute
     left 35px
     top 0
     bottom 0
     margin auto
     align-items center
-    z-index 1
+    z-index 2
     .icon
-      width 50px
-      height 50px
+      width 45px
+      height 45px
       padding 9px
       margin-right 12px
-      opacity .16
-      fill #fff
+      opacity .26
+      fill #333
     .aside-list__item
       align-items center
       margin-bottom 20px
+      cursor pointer
+      transition .55s
       &.active
+        transform scale(1.18)
         h6
           opacity 1
         .icon
-          border 1px dashed #fff
+          border 1px dashed #333
           border-radius 50%
           opacity 1
       &:hover
         h6
           opacity 1
         .icon
-          border 1px solid #fff
+          border 1px solid #333
           border-radius 50%
           opacity 1
     h6
       font-size 18px
       font-weight 300
-      color #fff
+      color #333
       opacity .16
       transition .55s
 
 
   &__initial-screen
     justify-content space-around
+    height 100vh
+    align-items center
     &:before
       content ''
-      background rgba(54, 53, 21, 0.73)
-      position fixed
+      background rgba(0, 0, 0, 0.58)
+      position absolute
       top 0
       left 0
       right 0
@@ -52,33 +70,20 @@
       z-index 1
     &:after
       content ''
-      position fixed
-      height 100vh
+      position absolute
       background url(../images/main-initial-bg.jpg) no-repeat
       background-size: cover;
-      width 100%
-    .left-side
-      max-width 65%
-      width 100%
-      height 100vh
-      position sticky
       top 0
-      border-radius 0 7px 0 0
-      overflow hidden
-      align-items center
-      justify-content flex-end
-      z-index 1
-      img
-        position absolute
-        top 0
-        left 0
+      left 0
+      right 0
+      bottom 0
     .wrap
       position absolute
       z-index 2
       max-width 650px
       text-align center
     h1
-      font-size 58px
+      font-size 65px
       color #fff
       line-height 56px
     p
