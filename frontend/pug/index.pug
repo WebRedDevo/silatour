@@ -9,24 +9,41 @@ html(lang='ru')
     include inc/header.pug
     main.main.grid
       .main__initial-screen.flex.initial-screen
-        .left-side
-          img(src='images/main-initial-bg.jpg' alt='')
+        .left-side.flex
           .wrap
-            h1 Начните свое путешествие с 
-              span Италии
+            h1 Начните путешествие сегодня
             p Это Европа и вам не нужна виза 
             form.initial-screen__form.flex
               input(type='text' placeholder='Италия').form__search
               input(type='submit' id='search-button').form__button
               label(for='search-button' )
                 +icon('right-arrow')
+        
             
         .right-side.flex
+          .right-side__heading.flex
+            +icon('fire')
+            h2 Важные новости
           +article-posts
           +article-posts
           +article-posts
           +article-posts
           +article-posts
 
-            
+      aside.main__aside.flex
+        ul.main__aside-list
+          li.aside-list__item.flex.active
+            +icon('fire')
+            h6 Путеводитель
+          li.aside-list__item.flex
+            +icon('login')
+            h6 Авиабилеты
+          li.aside-list__item.flex
+            +icon('plane')
+            h6 Отели
+          li.aside-list__item.flex
+            +icon('eye')
+            h6 Туры
+      
+    
     include inc/footer.pug

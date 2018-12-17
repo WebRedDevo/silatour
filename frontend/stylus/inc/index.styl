@@ -1,62 +1,124 @@
 .main
+  &__aside
+    position fixed
+    left 35px
+    top 0
+    bottom 0
+    margin auto
+    align-items center
+    z-index 1
+    .icon
+      width 50px
+      height 50px
+      padding 9px
+      margin-right 12px
+      opacity .16
+      fill #fff
+    .aside-list__item
+      align-items center
+      margin-bottom 20px
+      &.active
+        h6
+          opacity 1
+        .icon
+          border 1px dashed #fff
+          border-radius 50%
+          opacity 1
+      &:hover
+        h6
+          opacity 1
+        .icon
+          border 1px solid #fff
+          border-radius 50%
+          opacity 1
+    h6
+      font-size 18px
+      font-weight 300
+      color #fff
+      opacity .16
+      transition .55s
+
+
   &__initial-screen
-    padding-top 125px
-    background #1e1e1e
-    .left-side
-      max-width 72%
+    justify-content space-around
+    &:before
+      content ''
+      background rgba(54, 53, 21, 0.73)
+      position fixed
+      top 0
+      left 0
+      right 0
+      bottom 0
+      z-index 1
+    &:after
+      content ''
+      position fixed
+      height 100vh
+      background url(../images/main-initial-bg.jpg) no-repeat
+      background-size: cover;
       width 100%
-      padding 266px
+    .left-side
+      max-width 65%
+      width 100%
       height 100vh
       position sticky
-      margin-top -125px
       top 0
+      border-radius 0 7px 0 0
+      overflow hidden
+      align-items center
+      justify-content flex-end
+      z-index 1
       img
         position absolute
         top 0
         left 0
-      &:before
-        content ''
-        background rgba(54, 53, 21, 0.63)
-        position absolute
-        top 0
-        left 0
-        right 0
-        bottom 0
-        z-index 1
     .wrap
-      position relative
+      position absolute
       z-index 2
+      max-width 650px
+      text-align center
     h1
-      font-size 50px
+      font-size 58px
       color #fff
       line-height 56px
-      span
-        border-bottom 1px dashed
-        cursor pointer
-        transition .55s
-        &:hover
-          color var(--silatourColor)
-
     p
       margin 19px 0
       color #ccc
 
     .right-side
-      max-width 28%
+      max-width 24%
+      margin-top 47%
       width 100%
+      z-index 1
       padding-left 20px
       justify-content flex-start
       flex-wrap wrap
+      &__heading
+        align-items start
+        .icon
+          fill #ff4641
+          width 20px
+          height 20px
+          margin-right 8px
+      h2
+        color #ff4641
+        font-weight 400
+        text-transform uppercase
+        margin-bottom 15px
+        line-height 20px
+        font-size 20px
+        letter-spacing 2px
 
 
 .initial-screen__form
+  justify-content center
   &:hover
     .form__search
       background #fff
 .form__search
   padding 15px
   margin-right 5px
-  width 70%
+  width 80%
   background rgba(255,255,255, .7)
   transition .55s
   font-size 18px

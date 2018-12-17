@@ -37,9 +37,9 @@
     </header>
     <main class="main grid">
       <div class="main__initial-screen flex initial-screen">
-        <div class="left-side"><img src="images/main-initial-bg.jpg" alt="">
+        <div class="left-side flex">
           <div class="wrap">
-            <h1>Начните свое путешествие с <span>Италии</span></h1>
+            <h1>Начните путешествие сегодня</h1>
             <p>Это Европа и вам не нужна виза </p>
             <form class="initial-screen__form flex">
               <input class="form__search" type="text" placeholder="Италия">
@@ -53,6 +53,12 @@
           </div>
         </div>
         <div class="right-side flex">
+          <div class="right-side__heading flex">
+                <svg class="icon icon-fire ">
+                  <use xlink:href="#icon-fire"></use>
+                </svg>
+            <h2>Важные новости</h2>
+          </div>
               <article class="article-posts"><a href="fullstory.html"><img src="images/full-content-1.jpg" alt="">
                   <header class="article-posts__header">
                     <div class="article-posts__categeory">Куда <span>поехать</span></div>
@@ -115,6 +121,34 @@
                   </footer></a></article>
         </div>
       </div>
+      <aside class="main__aside flex">
+        <ul class="main__aside-list">
+          <li class="aside-list__item flex active">
+                <svg class="icon icon-fire ">
+                  <use xlink:href="#icon-fire"></use>
+                </svg>
+            <h6>Путеводитель</h6>
+          </li>
+          <li class="aside-list__item flex">
+                <svg class="icon icon-login ">
+                  <use xlink:href="#icon-login"></use>
+                </svg>
+            <h6>Авиабилеты</h6>
+          </li>
+          <li class="aside-list__item flex">
+                <svg class="icon icon-plane ">
+                  <use xlink:href="#icon-plane"></use>
+                </svg>
+            <h6>Отели</h6>
+          </li>
+          <li class="aside-list__item flex">
+                <svg class="icon icon-eye ">
+                  <use xlink:href="#icon-eye"></use>
+                </svg>
+            <h6>Туры</h6>
+          </li>
+        </ul>
+      </aside>
     </main>
     <footer class="footer"></footer>
     <script src="js/lib.min.js"></script>

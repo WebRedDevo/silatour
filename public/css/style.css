@@ -364,7 +364,7 @@ p a
 
     content: '';
 
-    background: rgba(0,0,0,.58);
+    background: rgba(54,53,21,.67);
 }
 
 .fullstory .initial-screen:after
@@ -446,6 +446,7 @@ p a
 .fullstory__content a
 {
     font-size: 1.1875rem;
+    font-weight: 300;
     line-height: 1.75rem;
 
     margin-bottom: 20px;
@@ -687,7 +688,7 @@ p a
 
     max-width: 950px;
     margin: auto;
-    padding: 20% 7% 14%;
+    padding: 20% 0 14%;
 
     text-align: center;
 }
@@ -703,7 +704,28 @@ p a
 
     content: '';
 
-    background: rgba(0,0,0,.58);
+    background: rgba(54,53,21,.67);
+}
+
+.travel-tip-page .initial-screen:after
+{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -4px;
+    left: 0;
+
+    height: 29%;
+
+    content: '';
+
+    background: -webkit-gradient(linear, left bottom, left top, from(#fff), to(rgba(255,255,255,0)));
+
+    background: -webkit-linear-gradient(bottom, #fff, rgba(255,255,255,0));
+
+    background: -o-linear-gradient(bottom, #fff, rgba(255,255,255,0));
+
+    background: linear-gradient(to top, #fff, rgba(255,255,255,0));
 }
 
 .travel-tip-page .initial-screen .close
@@ -780,6 +802,7 @@ p a
 .travel-tip-page__info p
 {
     font-size: 1.1875rem;
+    font-weight: 300;
     line-height: 1.75rem;
 
     margin-bottom: 20px;
@@ -1521,24 +1544,126 @@ p a
     color: #fff;
 }
 
+.main__aside
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 35px;
+
+    margin: auto;
+
+    align-items: center;
+}
+
+.main__aside .icon
+{
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    padding: 9px;
+
+    opacity: .16;
+
+    fill: #fff;
+}
+
+.main__aside .aside-list__item
+{
+    margin-bottom: 20px;
+
+    align-items: center;
+}
+
+.main__aside .aside-list__item.active h6
+{
+    opacity: 1;
+}
+
+.main__aside .aside-list__item.active .icon
+{
+    opacity: 1;
+    border: 1px dashed #fff;
+    border-radius: 50%;
+}
+
+.main__aside .aside-list__item:hover h6,
+.main__aside .aside-list__item:focus h6
+{
+    opacity: 1;
+}
+
+.main__aside .aside-list__item:hover .icon,
+.main__aside .aside-list__item:focus .icon
+{
+    opacity: 1;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.main__aside h6
+{
+    font-size: 1.125rem;
+    font-weight: 300;
+
+    transition: .55s;
+
+    opacity: .16;
+    color: #fff;
+}
+
 .main__initial-screen
 {
-    padding-top: 125px;
+    justify-content: space-around;
+}
 
-    background: #1e1e1e;
+.main__initial-screen:before
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+
+    background: rgba(54,53,21,.73);
+}
+
+.main__initial-screen:after
+{
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    content: '';
+
+    background: url('../images/main-transparent none repeat 0 0 / auto auto padding-box border-box scroll-bg.jpg') no-repeat;
+
+    background: url('../images/main-initial-bg.jpg') no-repeat;
+    background-size: cover;
 }
 
 .main__initial-screen .left-side
 {
     position: -webkit-sticky;
     position: sticky;
+    z-index: 1;
     top: 0;
 
+    overflow: hidden;
+
     width: 100%;
-    max-width: 72%;
+    max-width: 65%;
     height: 100vh;
-    margin-top: -125px;
-    padding: 266px;
+
+    border-radius: 0 7px 0 0;
+
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .main__initial-screen .left-side img
@@ -1548,47 +1673,22 @@ p a
     left: 0;
 }
 
-.main__initial-screen .left-side:before
-{
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    content: '';
-
-    background: rgba(54,53,21,.63);
-}
-
 .main__initial-screen .wrap
 {
-    position: relative;
+    position: absolute;
     z-index: 2;
+
+    max-width: 650px;
+
+    text-align: center;
 }
 
 .main__initial-screen h1
 {
-    font-size: 3.125rem;
+    font-size: 3.625rem;
     line-height: 3.5rem;
 
     color: #fff;
-}
-
-.main__initial-screen h1 span
-{
-    cursor: pointer;
-    transition: .55s;
-
-    border-bottom: 1px dashed;
-}
-
-.main__initial-screen h1 span:hover,
-.main__initial-screen h1 span:focus
-{
-    color: #abfff0;
-    color: var(--silatourColor);
 }
 
 .main__initial-screen p
@@ -1600,12 +1700,48 @@ p a
 
 .main__initial-screen .right-side
 {
+    z-index: 1;
+
     width: 100%;
-    max-width: 28%;
+    max-width: 24%;
+    margin-top: 47%;
     padding-left: 20px;
 
     justify-content: flex-start;
     flex-wrap: wrap;
+}
+
+.main__initial-screen .right-side__heading
+{
+    align-items: start;
+}
+
+.main__initial-screen .right-side__heading .icon
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+
+    fill: #ff4641;
+}
+
+.main__initial-screen .right-side h2
+{
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+
+    margin-bottom: 15px;
+
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+
+    color: #ff4641;
+}
+
+.initial-screen__form
+{
+    justify-content: center;
 }
 
 .initial-screen__form:hover .form__search,
@@ -1618,7 +1754,7 @@ p a
 {
     font-size: 1.125rem;
 
-    width: 70%;
+    width: 80%;
     margin-right: 5px;
     padding: 15px;
 
