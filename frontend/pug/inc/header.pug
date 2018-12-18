@@ -1,5 +1,5 @@
 include mixins.pug
-header.header.grid
+header.header.flex
   .header__left-side.flex
     a(href='/').logotype Силатур
     nav.header__navigation
@@ -14,8 +14,6 @@ header.header.grid
           a(href='country-page.html') Еще
 
   .header__right-side.flex
-    .wrap
-      
       input(id='light-mode' type='checkbox' )
       label(for='light-mode')
       button.flex

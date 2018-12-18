@@ -1,14 +1,15 @@
 .header
   position absolute
-  grid-template-columns: repeat(16, 1fr)
   z-index 9
-  padding 15px 0px
+  padding 15px 5%
   width 100%
+  justify-content space-between
+  &:hover
+    .header__navigation,
+    .header__right-side
+      opacity 1
   &__left-side
-    grid-column 1/10
     align-items center
-    grid-template-columns: repeat(16, 1fr)
-    display grid
     .header__menu
       &-item
         font-weight 300
@@ -21,30 +22,26 @@
           display block
           margin 0 12px 0 0
   &__right-side
-    grid-template-columns repeat(16,1fr)
-    display grid
-    grid-column 10/17
-    .wrap
-      grid-column: 1/16
-      display flex
-      align-items center
-      justify-content flex-end
+    opacity .4
+    transition .55s
+    align-items center
+    justify-content flex-end
     .icon
       height 17px
       width: 17px
-      fill #fff
+      fill #333
       margin-right 8px
     button
       border-radius 50px
       background 0
-      color #fff
+      color #333
       padding 10px 25px
       border 1px solid
       margin-left 12px
       align-items center
     label
       border-radius 50px
-      border 1px solid #fff
+      border 1px solid #333
       width 90px
       height 45px
       cursor pointer
@@ -65,9 +62,10 @@
           transform translateX(55px)
           background #fff
   .header__navigation
-    grid-column 7/16
+    margin-left 94px
+    opacity .4
+    transition .55s
   .logotype
-    grid-column 2/6
     font-family Debby
     color var(--lightMode)
     font-size 68px

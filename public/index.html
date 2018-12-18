@@ -7,7 +7,7 @@
     <title>Главная</title>
   </head>
   <body>
-    <header class="header grid">
+    <header class="header flex">
       <div class="header__left-side flex"><a class="logotype" href="/">Силатур</a>
         <nav class="header__navigation">
           <ul class="header__menu flex">
@@ -19,20 +19,18 @@
         </nav>
       </div>
       <div class="header__right-side flex">
-        <div class="wrap">
-          <input id="light-mode" type="checkbox">
-          <label for="light-mode"></label>
-          <button class="flex">
-                <svg class="icon icon-menu ">
-                  <use xlink:href="#icon-menu"></use>
-                </svg><span>Сервисы</span>
-          </button>
-          <button class="flex">
-                <svg class="icon icon-login ">
-                  <use xlink:href="#icon-login"></use>
-                </svg><span>Войти </span>
-          </button>
-        </div>
+        <input id="light-mode" type="checkbox">
+        <label for="light-mode"></label>
+        <button class="flex">
+              <svg class="icon icon-menu ">
+                <use xlink:href="#icon-menu"></use>
+              </svg><span>Сервисы</span>
+        </button>
+        <button class="flex">
+              <svg class="icon icon-login ">
+                <use xlink:href="#icon-login"></use>
+              </svg><span>Войти </span>
+        </button>
       </div>
     </header>
     <main class="main">
@@ -88,7 +86,7 @@
         <div class="main__initial-screen flex main-initial__tab">
           <div class="wrap">
             <h1>Стран много - отпуск один</h1>
-            <p>Это Европа и вам не нужна виза </p>
+            <p> <span>Мы собрали для вас петеводители в 186 стран и 374 городов, дальше действовать будете вы...</span></p>
             <form class="initial-screen__form flex">
               <input class="form__search" type="text" placeholder="Италия">
               <input class="form__button" type="submit" id="search-button">
