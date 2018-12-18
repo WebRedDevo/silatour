@@ -1,0 +1,93 @@
+.book-page
+  &:before
+    content ''
+    background rgba(0, 0, 0, 0.63)
+    position fixed
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index 1
+  &:after
+    content ''
+    position fixed
+    background url(../images/main-initial-bg.jpg) no-repeat
+    background-size: cover;
+    top 0
+    left 0
+    right 0
+    bottom 0
+  .initial-screen
+    position relative
+    padding: 30px 4% 25px;
+    border-left: 1px solid #fff;
+    margin-top: 160px;
+    margin-bottom: 100px;
+    max-width 1280px
+    margin auto
+    z-index 3
+    .name-cat
+      text-transform uppercase
+      color #333
+      background #ffeb7c
+      padding 4px 8px
+      font-size 13px
+      border-radius 1px
+      letter-spacing 3px
+      text-align center
+    .book__authors
+      color #fff
+      span,a
+        font-weight 300
+        font-size: 23px;
+        margin-left 10px
+        color #fff
+        border-bottom: 1px solid #fff;
+    .book__keywords
+      margin-top 50px
+
+      a
+        color: #fff;
+        border: 1px solid;
+        padding: 9px 15px;
+        font-weight 300
+        margin-right 7px
+        font-size: 19px;
+        border-radius: 2px;
+        display: inline-block;
+        margin-bottom: 9px;
+
+
+    p
+      color #fff
+      font-size 19px
+      line-height 24px
+      font-weight 300
+      max-width 450px
+  h1
+    color #fff
+    font-size 45px
+    font-weight 700
+    margin 15px 0 25px
+  &__content
+    background #fff
+    margin  auto
+    padding 0 11%
+    z-index 9
+    border-radius 5px
+    position relative
+    img
+      width 350px
+      margin-top -45px
+      border-radius 5px
+    p
+      font-size 19px
+      line-height 24px
+      font-weight 300
+    &-info
+      padding 60px
+      width calc(100% - 350px)
+    h2
+      color #333
+      font-size 36px
+      margin-bottom 15px

@@ -2101,6 +2101,166 @@ p a
     background: #ffeb7c;
 }
 
+.book-page:before
+{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+
+    background: rgba(0,0,0,.63);
+}
+
+.book-page:after
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    content: '';
+
+    background: url('../images/main-transparent none repeat 0 0 / auto auto padding-box border-box scroll-bg.jpg') no-repeat;
+
+    background: url('../images/main-initial-bg.jpg') no-repeat;
+    background-size: cover;
+}
+
+.book-page .initial-screen
+{
+    position: relative;
+    z-index: 3;
+
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 160px;
+    margin-bottom: 100px;
+    padding: 30px 4% 25px;
+
+    border-left: 1px solid #fff;
+}
+
+.book-page .initial-screen .name-cat
+{
+    font-size: 0.8125rem;
+
+    padding: 4px 8px;
+
+    text-align: center;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+
+    color: #333;
+    border-radius: 1px;
+    background: #ffeb7c;
+}
+
+.book-page .initial-screen .book__authors
+{
+    color: #fff;
+}
+
+.book-page .initial-screen .book__authors span,
+.book-page .initial-screen .book__authors a
+{
+    font-size: 1.4375rem;
+    font-weight: 300;
+
+    margin-left: 10px;
+
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.book-page .initial-screen .book__keywords
+{
+    margin-top: 50px;
+}
+
+.book-page .initial-screen .book__keywords a
+{
+    font-size: 1.1875rem;
+    font-weight: 300;
+
+    display: inline-block;
+
+    margin-right: 7px;
+    margin-bottom: 9px;
+    padding: 9px 15px;
+
+    color: #fff;
+    border: 1px solid;
+    border-radius: 2px;
+}
+
+.book-page .initial-screen p
+{
+    font-size: 1.1875rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+
+    max-width: 450px;
+
+    color: #fff;
+}
+
+.book-page h1
+{
+    font-size: 2.8125rem;
+    font-weight: 700;
+
+    margin: 15px 0 25px;
+
+    color: #fff;
+}
+
+.book-page__content
+{
+    position: relative;
+    z-index: 9;
+
+    margin: auto;
+    padding: 0 11%;
+
+    border-radius: 5px;
+    background: #fff;
+}
+
+.book-page__content img
+{
+    width: 350px;
+    margin-top: -45px;
+
+    border-radius: 5px;
+}
+
+.book-page__content p
+{
+    font-size: 1.1875rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.book-page__content-info
+{
+    width: calc(100% - 350px);
+    padding: 60px;
+}
+
+.book-page__content h2
+{
+    font-size: 2.25rem;
+
+    margin-bottom: 15px;
+
+    color: #333;
+}
+
 .article-short-guidebook__img
 {
     transition: .55s;
