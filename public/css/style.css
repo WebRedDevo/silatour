@@ -1545,6 +1545,96 @@ p a
     color: #fff;
 }
 
+.main__books
+{
+    margin: 50px 0;
+
+    background: #fff;
+}
+
+.main__books h2
+{
+    font-size: 3.5rem;
+
+    margin-bottom: 50px;
+
+    color: #333;
+}
+
+.main__books .flex
+{
+    flex-wrap: wrap;
+}
+
+.main .article-book
+{
+    width: 18%;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.main .article-book img
+{
+    max-height: 380px;
+    margin-bottom: 10px;
+
+    border-radius: 3px;
+}
+
+.main .article-book span
+{
+    color: #ccc;
+}
+
+.main .article-book h3
+{
+    color: #333;
+}
+
+.main__journal
+{
+    overflow: hidden;
+
+    padding: 65px 0;
+
+    background: #e7fffb;
+    box-shadow: inset 0 0 20px rgba(0,0,0,.17);
+}
+
+.main__journal .container
+{
+    padding: 0 0 0 10%;
+}
+
+.main__journal .article-posts
+{
+    min-width: 300px;
+    max-width: 100%;
+    height: 440px;
+    margin-right: 20px;
+
+    border-radius: 14px;
+}
+
+.main__journal .article-posts h3
+{
+    font-size: 1.4375rem;
+}
+
+.main__journal .article-posts__categeory
+{
+    font-size: 1.5rem;
+}
+
+.main__journal h2
+{
+    font-size: 3.5rem;
+
+    margin-bottom: 35px;
+
+    color: #393939;
+}
+
 .main-initial__tab
 {
     display: none;
@@ -1925,8 +2015,9 @@ p a
 .main__travel-filter
 {
     width: 100%;
+    height: 100vh;
     padding: 0 15%;
-    padding-top: 150px;
+    padding-top: 100px;
 
     align-items: center;
     justify-content: space-around;
@@ -2136,10 +2227,10 @@ p a
     position: relative;
     z-index: 3;
 
-    max-width: 1280px;
+    max-width: 1080px;
     margin: auto;
     margin-top: 160px;
-    margin-bottom: 100px;
+    margin-bottom: 45px;
     padding: 30px 4% 25px;
 
     border-left: 1px solid #fff;
@@ -2168,7 +2259,7 @@ p a
 .book-page .initial-screen .book__authors span,
 .book-page .initial-screen .book__authors a
 {
-    font-size: 1.4375rem;
+    font-size: 1.25rem;
     font-weight: 300;
 
     margin-left: 10px;
@@ -2225,7 +2316,7 @@ p a
     z-index: 9;
 
     margin: auto;
-    padding: 0 11%;
+    padding: 70px 17%;
 
     border-radius: 5px;
     background: #fff;
@@ -2234,7 +2325,6 @@ p a
 .book-page__content img
 {
     width: 350px;
-    margin-top: -45px;
 
     border-radius: 5px;
 }
@@ -2244,12 +2334,14 @@ p a
     font-size: 1.1875rem;
     font-weight: 300;
     line-height: 1.5rem;
+
+    margin-bottom: 20px;
 }
 
 .book-page__content-info
 {
     width: calc(100% - 350px);
-    padding: 60px;
+    padding: 0 60px;
 }
 
 .book-page__content h2
