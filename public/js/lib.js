@@ -67,6 +67,24 @@ if (document.querySelector('.close') !== null) {
     }
   });
 }
+
+var lastScrolled = 0;
+
+window.onscroll = function () {
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (lastScrolled > scrolled) {
+    document.querySelector('.header').classList.add('fixed');
+  } else if (lastScrolled < scrolled) {
+    document.querySelector('.header').classList.remove('fixed');
+  }
+
+  if (scrolled < 100) {
+    document.querySelector('.header').classList.remove('fixed');
+  }
+
+  lastScrolled = scrolled;
+};
 "use strict";
 
 document.querySelector('.header').classList.add('white');
@@ -136,7 +154,7 @@ if (fullStory !== null) document.querySelector('.initial-screen__info').appendCh
 
 if (countrypPage !== null) {
   var miniInfo = document.querySelector('.mini-info');
-  document.querySelector('.initial-screen__info').insertBefore(speedbar, miniInfo);
+  document.querySelector('.initial-screen').appendChild(speedbar);
 }
 "use strict";
 
@@ -175,7 +193,6 @@ if (mainTabs !== undefined) {
     document.querySelectorAll('.aside-list__item')[1].classList.remove('white');
     document.querySelectorAll('.aside-list__item')[2].classList.remove('white');
     document.querySelector('html').classList.remove('night');
-    document.querySelector('header').classList.remove('fixed');
   });
   document.querySelectorAll('.aside-list__item')[1].addEventListener('click', function () {
     document.querySelectorAll('.main-initial__tab')[0].classList.remove('active');
@@ -188,7 +205,6 @@ if (mainTabs !== undefined) {
     document.querySelectorAll('.aside-list__item')[1].classList.add('white');
     document.querySelectorAll('.aside-list__item')[2].classList.remove('white');
     document.querySelector('html').classList.add('night');
-    document.querySelector('header').classList.remove('fixed');
   });
   document.querySelectorAll('.aside-list__item')[2].addEventListener('click', function () {
     document.querySelectorAll('.main-initial__tab')[0].classList.remove('active');
@@ -201,8 +217,17 @@ if (mainTabs !== undefined) {
     document.querySelectorAll('.aside-list__item')[1].classList.remove('white');
     document.querySelectorAll('.aside-list__item')[2].classList.remove('white');
     document.querySelector('html').classList.remove('night');
-    document.querySelector('header').classList.add('fixed');
   });
+  document.querySelectorAll('.main-initial__tab')[0].classList.remove('active');
+  document.querySelectorAll('.main-initial__tab')[1].classList.remove('active');
+  document.querySelectorAll('.main-initial__tab')[2].classList.add('active');
+  document.querySelectorAll('.aside-list__item')[0].classList.remove('active');
+  document.querySelectorAll('.aside-list__item')[1].classList.remove('active');
+  document.querySelectorAll('.aside-list__item')[2].classList.add('active');
+  document.querySelectorAll('.aside-list__item')[0].classList.remove('white');
+  document.querySelectorAll('.aside-list__item')[1].classList.remove('white');
+  document.querySelectorAll('.aside-list__item')[2].classList.remove('white');
+  document.querySelector('html').classList.remove('night');
 }
 "use strict";
 

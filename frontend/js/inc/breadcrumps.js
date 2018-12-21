@@ -14,5 +14,5 @@ if(fullStory !== null) document.querySelector('.initial-screen__info').appendChi
 
 if(countrypPage!== null){
   var miniInfo = document.querySelector('.mini-info');
-  document.querySelector('.initial-screen__info').insertBefore(speedbar, miniInfo );
+  document.querySelector('.initial-screen').appendChild(speedbar);
 }

@@ -14,13 +14,34 @@
         z-index 1
         border-radius: 15px;
         margin-right: 25px;
-        padding 50px 0
+        a
+          position: relative;
+          height: 250px;
+          display: block;
+          margin-bottom: 20px;
+          border-radius: 15px 15px 0 0;
+          overflow hidden
+          &:before
+            content ''
+            position absolute
+            left 0
+            right 0
+            top 0
+            bottom 0
+            background rgba(54,53,21,.53)
+            z-index 1
         h2
           padding 0 50px
           font-size 29px
           font-weight 400
           margin-bottom 20px
-          margin-top 20px
+          margin-top 10px
+          color #fff
+
+        .post__header
+          position: absolute;
+          bottom: 22px;
+          z-index 2
         p
           font-size 19px
           line-height 28px
@@ -32,12 +53,12 @@
           padding 0 50px
           &.category
             text-transform uppercase
-            color #7effc3
+            color var(--silatourColor)
             letter-spacing 2px
             font-weight 500
-            margin-bottom 20px
         img
-          margin-bottom 20px
+          position: absolute;
+
     &-aside
       position sticky
       top 60px
@@ -99,7 +120,7 @@
       display flex
 
   &__aside
-    position absolute
+    position fixed
     left 35px
     top 0
     bottom 0
@@ -107,8 +128,8 @@
     align-items center
     z-index 2
     .icon
-      width 45px
-      height 45px
+      width 43px
+      height 43px
       padding 9px
       margin-right 12px
       opacity .26
@@ -145,7 +166,7 @@
           border-radius 50%
           opacity 1
     h6
-      font-size 18px
+      font-size 16px
       font-weight 300
       color #333
       opacity .16

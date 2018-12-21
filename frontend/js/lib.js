@@ -17,3 +17,20 @@ if(document.querySelector('.close') !== null){
 
   })
 }
+
+
+
+var lastScrolled = 0;
+window.onscroll = function() {
+  var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+  if( lastScrolled > scrolled ){
+    document.querySelector('.header').classList.add('fixed');
+  }  else if(lastScrolled < scrolled){
+    document.querySelector('.header').classList.remove('fixed');
+  }
+  if(scrolled < 100){
+    document.querySelector('.header').classList.remove('fixed');
+  }
+
+  lastScrolled = scrolled;
+}
