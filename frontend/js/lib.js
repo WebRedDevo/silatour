@@ -25,11 +25,22 @@ window.onscroll = function() {
   var scrolled = window.pageYOffset || document.documentElement.scrollTop;
   if( lastScrolled > scrolled ){
     document.querySelector('.header').classList.add('fixed');
-  }  else if(lastScrolled < scrolled){
+    document.querySelector('.header').style.transform = 'translateY(0px)';
+    if(document.querySelector('.main__posts-aside') !== null)
+    document.querySelector('.main__posts-aside').style.top = '60px';
+  }
+  if(lastScrolled < scrolled){
+    document.querySelector('.header').style.transform = 'translateY(-60px)';
     document.querySelector('.header').classList.remove('fixed');
+    if(document.querySelector('.main__posts-aside') !== null)
+    document.querySelector('.main__posts-aside').style.top = '0px';
   }
   if(scrolled < 100){
+    document.querySelector('.header').style.position = 'absolute';
     document.querySelector('.header').classList.remove('fixed');
+  }
+  if(scrolled > 100){
+    document.querySelector('.header').style.position = 'fixed';
   }
 
   lastScrolled = scrolled;

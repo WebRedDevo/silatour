@@ -207,14 +207,15 @@ p a
     max-height: 60px;
     padding: 15px 9%;
 
+    transition: .33s;
+
     justify-content: space-between;
 }
 
 .header.fixed
 {
-    position: fixed;
-
     background: #fff;
+    box-shadow: 0 0 22px rgba(0,0,0,.25);
 }
 
 .header.fixed .logotype
@@ -492,7 +493,7 @@ p a
     padding: 50px 0;
 
     border-radius: 0;
-    border-radius: 15px;
+    border-radius: 9px;
     background: #fff;
 }
 
@@ -513,16 +514,24 @@ p a
     color: #333;
 }
 
-.fullstory__content h2
+.fullstory__content h2,
+.fullstory__content h3,
+.fullstory__content h4,
+.fullstory__content h5,
+.fullstory__content h6
 {
-    font-size: 2.125rem;
-    line-height: 2.625rem;
-
-    margin-top: 30px;
     margin-bottom: 10px;
     padding: 0 50px;
 
     color: #333;
+}
+
+.fullstory__content h2
+{
+    font-size: 1.8125rem;
+    line-height: 2.625rem;
+
+    margin-top: 30px;
 }
 
 .fullstory__content img
@@ -829,6 +838,7 @@ p a
     position: relative;
 
     margin-bottom: 20px;
+    padding: 0 50px;
 
     color: #fff;
 }
@@ -859,7 +869,7 @@ p a
     margin: -175px auto 0;
     padding: 6% 9%;
 
-    border-radius: 15px 15px 0 0;
+    border-radius: 9px 9px 0 0;
     background: #fff;
     box-shadow: 3px 2px 20px rgba(0,0,0,.13);
 }
@@ -938,7 +948,7 @@ p a
 
 .country-page .initial-screen h1
 {
-    font-size: 5.625rem;
+    font-size: 5rem;
     font-weight: 800;
 
     display: inline-block;
@@ -1617,6 +1627,30 @@ p a
     color: #fff;
 }
 
+.post__header-infos
+{
+    margin-right: 20px;
+
+    align-items: center;
+}
+
+.post__header-infos span
+{
+    font-size: 1.0625rem;
+    font-weight: 200;
+
+    color: #fff;
+}
+
+.post__header-infos .icon
+{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+
+    fill: #fff;
+}
+
 .main__posts
 {
     padding-top: 85px;
@@ -1640,12 +1674,11 @@ p a
     margin-right: 25px;
     margin-bottom: 25px;
 
-    border-radius: 0;
-    border-radius: 15px;
+    border-radius: 9px;
     background: #fff;
 }
 
-.main__posts-content .post a
+.main__posts-content .post__link
 {
     position: relative;
 
@@ -1655,10 +1688,10 @@ p a
     height: 250px;
     margin-bottom: 20px;
 
-    border-radius: 15px 15px 0 0;
+    border-radius: 9px 9px 0 0;
 }
 
-.main__posts-content .post a:before
+.main__posts-content .post__link:before
 {
     position: absolute;
     z-index: 1;
@@ -1676,10 +1709,10 @@ p a
 {
     font-size: 1.8125rem;
     font-weight: 400;
+    line-height: 2rem;
 
     margin-top: 10px;
     margin-bottom: 20px;
-    padding: 0 50px;
 
     color: #fff;
 }
@@ -1689,6 +1722,8 @@ p a
     position: absolute;
     z-index: 2;
     bottom: 22px;
+
+    padding: 0 50px;
 }
 
 .main__posts-content .post p
@@ -1701,11 +1736,6 @@ p a
     padding: 0 50px;
 
     color: #333;
-}
-
-.main__posts-content .post span
-{
-    padding: 0 50px;
 }
 
 .main__posts-content .post span.category
@@ -1729,22 +1759,72 @@ p a
 {
     position: -webkit-sticky;
     position: sticky;
-    top: 60px;
+    top: 0;
 
     width: 100%;
     max-width: 300px;
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
+
+    transition: .33s;
 }
 
-.main__posts-aside .blok
+.main__posts-aside .posts-aside__block
 {
     width: 300px;
-    height: 400px;
     margin-bottom: 25px;
+    padding: 25px;
 
+    border-radius: 5px;
     background: #fff;
+}
+
+.main__posts-aside .block-tags
+{
+    margin-top: 13px;
+}
+
+.main__posts-aside .block-tags a
+{
+    display: inline-block;
+
+    margin-right: 6px;
+    margin-bottom: 6px;
+    padding: 8px 13px;
+
+    color: #333;
+    border: 1px solid #333;
+    border-radius: 2px;
+}
+
+.main__posts-aside h6
+{
+    font-size: 1.0625rem;
+    font-weight: 300;
+
+    margin-bottom: 5px;
+
+    color: #b7b7b7;
+}
+
+.main__posts-aside .nav-list__item a
+{
+    font-size: 1.125rem;
+    font-weight: 400;
+
+    display: inline-block;
+
+    width: 100%;
+    padding: 18px 0;
+
+    color: #4d4d4d;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.main__posts-aside .nav-list__item:last-child a
+{
+    border-bottom: 0;
 }
 
 .main__books
@@ -2482,9 +2562,9 @@ p a
 
     display: inline-block;
 
-    margin-right: 7px;
-    margin-bottom: 9px;
-    padding: 9px 15px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    padding: 8px 13px;
 
     color: #fff;
     border: 1px solid;

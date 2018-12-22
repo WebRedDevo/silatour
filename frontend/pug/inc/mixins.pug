@@ -12,7 +12,7 @@ mixin video-short
     
 mixin article-short-guidebook(title)
   article.article-short-guidebook
-    a(href='country-page.html' onclick="return false")
+    a(href='country-page.html' )
       img(src='images/norvigia-country.jpg' alt='').article-short-guidebook__img            
       header.article-short-guidebook__header
         img(src='images/svg/flags/norway-flag.svg' alt='').icon
@@ -43,11 +43,14 @@ mixin article-book
       
 mixin main-post
   .post
-    a(href='fullstory.html')
+    a(href='fullstory.html').post__link
       img(src='images/fullstory-wallpaper.jpg' alt='')
       header.post__header
         span.category Куда поехать
         h2 7 самых интересных городов Германии
+        .post__header-infos.flex
+          +icon('eye')
+          span 1234 
       
     p Предвкушая увлекательный перелет в страну, выбранную для отпуска, многие туристы иной раз не знают об определенных правилах перевозки багажа.      
     p Это большой, весёлый и живой город с огромным количеством исторических достопримечательностей и современных сооружений, столица субкультур, молодёжных движений и модных вечеринок. Вторая мировая навсегда оставила огромный след в истории и архитектуре Берлина, обязательно посетите Рейхстаг и музейный остров, полюбуйтесь Браденбургскими воротами, Берлинской стеной и Мариенкирхе.

@@ -1,5 +1,6 @@
 'use strict';
-var gulp = require('gulp'),
+var 
+gulp = require('gulp'),
 pug = require('gulp-pug'),
 stylus = require('gulp-stylus'),
 shorthand = require('gulp-shorthand'),
@@ -23,6 +24,7 @@ htmlmin = require('gulp-htmlmin'),
 csscomb = require('gulp-csscomb'),
 sourcemaps = require('gulp-sourcemaps'),
 babel = require('gulp-babel'),
+remember = require('gulp-remember'),
 rename = require('gulp-rename');
 
 var processors = [
@@ -107,8 +109,9 @@ symbols: 'sprite.svg'
 
 // JS min
 gulp.task('js:build', function(){
-return gulp.src('frontend/js/*.js')
-.pipe(gulp.src('frontend/js/inc/*.js'))
+return gulp.src('frontend/js/*.js', {since: gulp.lastRun('js:build')})
+.pipe(gulp.src('frontend/js/inc/*.js', {since: gulp.lastRun('js:build')}))
+.pipe(remember('js:build'))
 .pipe(babel({
 "presets": ["@babel/preset-env"]
 }))

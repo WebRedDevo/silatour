@@ -1,3 +1,16 @@
+.post__header-infos
+  align-items center
+  margin-right 20px
+  span
+    color #fff
+    font-weight 200
+    font-size 17px
+  .icon
+    width 25px
+    height 25px
+    margin-right 10px
+    fill #fff
+
 .main
 
   &__posts
@@ -8,18 +21,17 @@
       max-width: 650px;
       .post
         background #fff
-        border-radius: 0;
         margin-bottom 25px
         position relative
         z-index 1
-        border-radius: 15px;
+        border-radius: 9px;
         margin-right: 25px;
-        a
+        &__link
           position: relative;
           height: 250px;
           display: block;
           margin-bottom: 20px;
-          border-radius: 15px 15px 0 0;
+          border-radius: 9px 9px 0 0;
           overflow hidden
           &:before
             content ''
@@ -31,8 +43,8 @@
             background rgba(54,53,21,.53)
             z-index 1
         h2
-          padding 0 50px
           font-size 29px
+          line-height 32px
           font-weight 400
           margin-bottom 20px
           margin-top 10px
@@ -40,6 +52,7 @@
 
         .post__header
           position: absolute;
+          padding 0 50px
           bottom: 22px;
           z-index 2
         p
@@ -50,7 +63,7 @@
           padding 0 50px
           margin-bottom 20px
         span
-          padding 0 50px
+
           &.category
             text-transform uppercase
             color var(--silatourColor)
@@ -61,15 +74,45 @@
 
     &-aside
       position sticky
-      top 60px
+      top 0
       width 100%
       max-width 300px
       height max-content
-      .blok
+      transition .33s
+      .posts-aside__block
         width 300px
-        height 400px
+        padding 25px
         background #fff
         margin-bottom 25px
+        border-radius 5px
+      .block-tags
+        margin-top 13px
+        a
+          display inline-block
+          color #333
+          border 1px solid #333
+          margin-right 6px
+          margin-bottom 6px
+          padding 8px 13px
+          border-radius: 2px
+      h6
+        color #b7b7b7
+        font-size 17px
+        font-weight 300
+        margin-bottom 5px
+      .nav-list__item
+        a
+          display inline-block
+          padding 18px 0
+          border-bottom 1px solid #e6e6e6
+          color #4d4d4d
+          font-size 18px
+          font-weight 400
+          width 100%
+        &:last-child
+          a
+            border-bottom 0
+
   &__books
     background #fff
     margin 50px 0
