@@ -43,10 +43,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Smirennikov/silatour.git"
+    "url": "git+https://github.com/WebRedDevo/silatour.git"
   },
   "bugs": {
-    "url": "https://github.com/Smirennikov/silatour/issues"
+    "url": "https://github.com/WebRedDevo/silatour/issues"
   },
-  "homepage": "https://github.com/Smirennikov/silatour#readme"
+  "homepage": "https://github.com/WebRedDevo/silatour#readme"
 }

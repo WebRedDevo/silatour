@@ -18,7 +18,7 @@ if(document.querySelector('.close') !== null){
   })
 }
 
-
+document.querySelector('html').classList.add('night');
 
 var lastScrolled = 0;
 window.onscroll = function() {
@@ -26,21 +26,23 @@ window.onscroll = function() {
   if( lastScrolled > scrolled ){
     document.querySelector('.header').classList.add('fixed');
     document.querySelector('.header').style.transform = 'translateY(0px)';
-    if(document.querySelector('.main__posts-aside') !== null)
-    document.querySelector('.main__posts-aside').style.top = '60px';
+    if(document.querySelector('.aside') !== null)
+    document.querySelector('.aside').style.top = '60px';
   }
   if(lastScrolled < scrolled){
     document.querySelector('.header').style.transform = 'translateY(-60px)';
     document.querySelector('.header').classList.remove('fixed');
-    if(document.querySelector('.main__posts-aside') !== null)
-    document.querySelector('.main__posts-aside').style.top = '0px';
+    if(document.querySelector('.aside') !== null)
+    document.querySelector('.aside').style.top = '0px';
   }
   if(scrolled < 100){
     document.querySelector('.header').style.position = 'absolute';
     document.querySelector('.header').classList.remove('fixed');
+    document.querySelector('html').classList.add('night');
   }
   if(scrolled > 100){
     document.querySelector('.header').style.position = 'fixed';
+    document.querySelector('html').classList.remove('night');
   }
 
   lastScrolled = scrolled;
