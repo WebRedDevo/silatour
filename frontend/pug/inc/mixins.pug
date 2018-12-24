@@ -21,7 +21,7 @@ mixin article-short-guidebook(title)
         span Виза требуется 
         
 mixin article-posts
-  article.article-posts
+  article.article-posts.article-posts--popular
     a(href='fullstory.html')
       img(src='images/full-content-1.jpg' alt='')
       header.article-posts__header
@@ -32,6 +32,9 @@ mixin article-posts
           +icon('visibility')
       footer.article-posts__footer
         h3 2 авиабелета в германию туда-сюда за 999 руб 
+
+
+
 
 
 mixin article-book

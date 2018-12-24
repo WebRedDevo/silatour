@@ -1,0 +1,77 @@
+.article-posts
+  height 400px
+  max-width 91%
+  position relative
+  overflow: hidden;
+  border-radius 7px
+  box-shadow 0 10px 20px -5px rgba(0,0,0,.2)
+  margin-bottom 20px
+  a
+    &:before
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(54, 53, 21, 0.55);
+  &__header
+    position: absolute;
+    padding: 40px 35px;
+    top 0
+    z-index: 2;
+  &__categeory
+    text-transform uppercase
+    color #fff
+    font-weight 100
+    font-size 31px
+    width min-content
+    margin-bottom 8px
+    span
+      font-weight 800
+  &__views
+    color #fff
+    align-items center
+    font-size 19px
+    font-weight 200
+    span
+      margin-right 8px
+    .icon
+      fill #fff
+      width 25px
+      height 25px
+
+  &__footer
+    position: absolute;
+    padding: 0 35px 50px;
+    bottom: 0;
+    z-index: 2;
+  h3
+    color: #fff;
+    font-weight 300
+    font-size: 26px;
+    line-height: 30px;
+
+
+
+.article-posts
+  &.article-posts--popular
+    height 285px
+    &:hover
+      .article-posts
+        &__footer
+          background rgba(255,255,255, 1)
+    .article-posts
+      &__categeory
+        font-size 18px
+        margin-bottom 2px
+      &__views
+        font-size 17px
+      &__footer
+        transition .55s
+        background rgba(255,255,255, .9)
+        padding 25px
+        h3
+          color #333
+          font-size 20px
