@@ -12,30 +12,31 @@
       z-index 1
     img
       position: absolute;
-  .flex
-    align-items: center;
-  .left-side
-    max-width: 50%
-    position: relative;
-    z-index: 2
-    padding:170px 50px 170px 340px
-  .right-side
-    max-width: 50%
-    position: relative;
-    z-index: 2
-    width: 100%;
-    margin: 170px 20% 170px 0;
-    border-left: 1px solid #fff;
-    padding-left: 50px;
+  .country-filter
+    &__section.container
+      margin-top -40px
+      z-index 3
+    &__block
+      background #fff
+      margin 0 10px
+      padding 30px
+      overflow hidden
+      border-radius 5px
+      box-shadow 0 0 15px rgba(0,0,0, .14)
+  .info
+    position relative
+    padding 10% 0
+    z-index 3
+    text-align center
   h1
     text-transform uppercase
     color #fff
     font-size: 100px
     overflow-wrap break-word
-    font-weight: 800;
-
-    letter-spacing: 5px;
-    line-height: 100px
+    font-weight 800
+    letter-spacing 7px
+    line-height 100px
+    margin-bottom 15px
   p
     color #fff
     font-family 'Qanelas-Regular'
@@ -57,6 +58,7 @@
     flex-wrap: wrap;
     margin-top: 50px
     padding: 0 340px
+    justify-content center
 
 .article-short-guidebook
   margin: 0 10px 20px

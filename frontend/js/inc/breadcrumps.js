@@ -16,3 +16,7 @@ if(countrypPage!== null){
   var miniInfo = document.querySelector('.mini-info');
   document.querySelector('.initial-screen').appendChild(speedbar);
 }
+
+if(document.getElementsByClassName('category')[0] !== null){
+  document.getElementsByClassName('info')[0].appendChild(speedbar)
+}

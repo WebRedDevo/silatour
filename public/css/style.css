@@ -93,7 +93,18 @@ input[type='submit'] + label
 
 .speedbar
 {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
+    font-weight: 300;
+
+    transition: .33s;
+
+    opacity: .67;
+}
+
+.speedbar:hover,
+.speedbar:focus
+{
+    opacity: 1;
 }
 
 .speedbar span
@@ -103,9 +114,20 @@ input[type='submit'] + label
 
 .speedbar span a
 {
-    text-decoration: underline;
+    font-size: 0.875rem;
+
+    padding-bottom: 1px;
+
+    transition: .33s;
 
     color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.speedbar span a:hover,
+.speedbar span a:focus
+{
+    border-bottom: 0;
 }
 
 .navigation
@@ -141,6 +163,8 @@ input[type='submit'] + label
 
 .navigation a .icon
 {
+    width: 130px;
+
     transition: .55s;
 
     opacity: .2;
@@ -157,7 +181,7 @@ input[type='submit'] + label
 .navigation .right
 {
     position: fixed;
-    right: 0;
+    right: 50px;
     bottom: 0;
 
     -webkit-transform: rotate(180deg);
@@ -169,7 +193,7 @@ input[type='submit'] + label
 {
     position: fixed;
     bottom: 0;
-    left: 0;
+    left: 50px;
 }
 
 .close
@@ -1482,31 +1506,33 @@ p a
     position: absolute;
 }
 
-.category--country .flex
+.category--country .country-filter__section.container
 {
-    align-items: center;
+    z-index: 3;
+
+    margin-top: -40px;
 }
 
-.category--country .left-side
+.category--country .country-filter__block
 {
-    position: relative;
-    z-index: 2;
+    overflow: hidden;
 
-    max-width: 50%;
-    padding: 170px 50px 170px 340px;
+    margin: 0 10px;
+    padding: 30px;
+
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,.14);
 }
 
-.category--country .right-side
+.category--country .info
 {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 
-    width: 100%;
-    max-width: 50%;
-    margin: 170px 20% 170px 0;
-    padding-left: 50px;
+    padding: 10% 0;
 
-    border-left: 1px solid #fff;
+    text-align: center;
 }
 
 .category--country h1
@@ -1515,7 +1541,9 @@ p a
     font-weight: 800;
     line-height: 6.25rem;
 
-    letter-spacing: 0.3125rem;
+    margin-bottom: 15px;
+
+    letter-spacing: 0.4375rem;
     text-transform: uppercase;
 
     color: #fff;
@@ -1552,6 +1580,7 @@ p a
     padding: 0 340px;
 
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .article-short-guidebook
@@ -2740,6 +2769,8 @@ h6
 .article-posts.article-posts--popular:hover .article-posts__footer,
 .article-posts.article-posts--popular:focus .article-posts__footer
 {
+    width: 100%;
+
     background: #fff;
 }
 

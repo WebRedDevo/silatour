@@ -22,13 +22,18 @@ html(lang='ru')
         span Правила провоза багажа в самолете 
       .initial-screen
         img(src='images/norvigia-country.jpg' alt='').initial-screen__img
-        .flex
-          .left-side
-            h1 Страны 
-          .right-side
-            p Мы собрали 233 путеводителя, чтобы вам было удобно путешествовать и замечать больше интересных мест и деталей 
-            button Случайная страна 
+        .info
+          h1 Страны 
           
+      section.country-filter__section.flex.container
+        .country-filter__block
+          h6 Визовый режим 
+        .country-filter__block
+          h6 Где находится
+        .country-filter__block
+          h6 Чем заняться 
+        .country-filter__block
+          h6 Любое время
       .container.flex
         +article-short-guidebook('Норвегия')
         +article-short-guidebook('Норвегия')
