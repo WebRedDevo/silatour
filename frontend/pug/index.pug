@@ -9,6 +9,17 @@ html(lang='ru')
   body
     include inc/header.pug
     main.main
+      .speedbar
+        span 
+          a(href='#') Главная
+          |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+        span
+          a(href='#') Журнал
+          |&nbsp;&nbsp;‒&nbsp;&nbsp;
+        span
+          a(href='country-category.html') Советы
+          |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+        span Правила провоза багажа в самолете 
       .initial-screen
         aside.main__aside.flex
           ul.main__aside-list
@@ -61,6 +72,8 @@ html(lang='ru')
         .main__posts.main-initial__tab
             .container.flex
               .main__posts-content
+                h1 Конституционная монархия
+                p Все путеводители по странам и городам из серии "Оранжевый гид"
                 +main-post
                 +main-post
                 +main-post

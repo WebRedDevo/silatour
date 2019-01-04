@@ -1,3 +1,4 @@
+
 if(document.querySelector('.close') !== null){
 
   document.querySelector('.close').addEventListener('click', function(){
@@ -38,11 +39,11 @@ window.onscroll = function() {
   if(scrolled < 100){
     document.querySelector('.header').style.position = 'absolute';
     document.querySelector('.header').classList.remove('fixed');
-    document.querySelector('html').classList.add('night');
+
   }
   if(scrolled > 100){
     document.querySelector('.header').style.position = 'fixed';
-    document.querySelector('html').classList.remove('night');
+
   }
 
   lastScrolled = scrolled;

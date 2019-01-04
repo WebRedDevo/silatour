@@ -89,12 +89,10 @@ window.onscroll = function () {
   if (scrolled < 100) {
     document.querySelector('.header').style.position = 'absolute';
     document.querySelector('.header').classList.remove('fixed');
-    document.querySelector('html').classList.add('night');
   }
 
   if (scrolled > 100) {
     document.querySelector('.header').style.position = 'fixed';
-    document.querySelector('html').classList.remove('night');
   }
 
   lastScrolled = scrolled;
@@ -168,38 +166,58 @@ var speedbar = document.querySelector('.speedbar'),
     fullStory = document.querySelector('.fullstory'),
     videoPage = document.querySelector('.video-page '),
     travelTipPage = document.querySelector('.travel-tip-page');
-if (travelTipPage !== null) document.querySelector('.initial-screen__info').appendChild(speedbar);
-if (videoPage !== null) document.querySelector('.video-info').appendChild(speedbar);
-if (fullStory !== null) document.querySelector('.initial-screen__info').appendChild(speedbar);
+if (travelTipPage) document.querySelector('.initial-screen__info').appendChild(speedbar);
+if (videoPage) document.querySelector('.video-info').appendChild(speedbar);
+if (fullStory) document.querySelector('.initial-screen__info').appendChild(speedbar);
 
-if (countrypPage !== null) {
+if (countrypPage) {
   var miniInfo = document.querySelector('.mini-info');
   document.querySelector('.initial-screen').appendChild(speedbar);
 }
 
-if (document.getElementsByClassName('category')[0] !== null) {
-  document.getElementsByClassName('info')[0].appendChild(speedbar);
+if (document.querySelector('.category--country')) {
+  document.querySelector('.info').appendChild(speedbar);
 }
-// checkbox Light Mode
-// let lightMode = document.getElementById('light-mode');
-//
-// lightMode.addEventListener('change', function (){
-//   if(lightMode.checked === true){
-//     localStorage.setItem('lightMode','on');
-//     document.querySelector('html').classList.add('night');
-//   }else{
-//     localStorage.setItem('lightMode','off');
-//     document.querySelector('html').classList.remove('night');
-//   }
-// });
-//
-// if(localStorage.getItem('lightMode') === 'on'){
-//   lightMode.checked = true;
-//   document.querySelector('html').classList.add('night');
-// }else{
-//   document.querySelector('html').classList.remove('night');
-// }
+
+if (document.querySelector('.category--journal')) {
+  document.querySelector('.info').appendChild(speedbar);
+}
+
+if (document.querySelector('.main__posts')) {
+  document.querySelector('.main__posts-content p').after(speedbar);
+}
 "use strict";
+
+//checkbox Light Mode
+(function () {
+  var timus = new Date(),
+      timusHour = timus.getHours(),
+      lightMode = document.getElementById('light-mode');
+  console.log(timus);
+  lightMode.addEventListener('change', function () {
+    if (lightMode.checked === true) {
+      localStorage.setItem('lightMode', 'on');
+      document.querySelector('html').classList.add('night');
+    } else {
+      localStorage.setItem('lightMode', 'off');
+      document.querySelector('html').classList.remove('night');
+    }
+  });
+
+  if (localStorage.getItem('lightMode') === 'on') {
+    lightMode.checked = true;
+    document.querySelector('html').classList.add('night');
+  } else {
+    document.querySelector('html').classList.remove('night');
+  }
+
+  if (timusHour < 8 || timusHour > 22) {
+    lightMode.checked = true;
+    document.querySelector('html').classList.add('night');
+  } else {
+    document.querySelector('html').classList.remove('night');
+  }
+})();
 "use strict";
 
 var mainTabs = document.querySelectorAll('.aside-list__item')[0];

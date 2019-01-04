@@ -7,33 +7,54 @@
   box-shadow 0 10px 20px -5px rgba(0,0,0,.2)
   margin-bottom 20px
   a
+    font-family Qanelas
     &:before
-      content: '';
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(54, 53, 21, 0.55);
+      content ''
+      position absolute
+      z-index 1
+      top 0
+      left 0
+      right 0
+      bottom 0
+      background rgba(54, 53, 21, 0.55)
+    &:after
+      content ''
+      top 0
+      bottom 0
+      left 0
+      right 0
+      margin auto
+      width 100px
+      position absolute
+      background rgba(0, 0, 0, 0.69)
+      border-radius 50%
+      height 100px
+      transform scale(0)
+      opacity 0
+      transition .55s
+    &:hover
+      &:after
+        transform scale(7)
+        opacity 1
   &__header
-    position: absolute;
-    padding: 40px 35px;
+    position absolute
+    padding 40px 35px
     top 0
-    z-index: 2;
+    z-index 2
   &__categeory
     text-transform uppercase
     color #fff
     font-weight 100
-    font-size 31px
+    font-size 21px
     width min-content
     margin-bottom 8px
+    line-height 20px
     span
       font-weight 800
   &__views
     color #fff
     align-items center
-    font-size 19px
+    font-size 16px
     font-weight 200
     span
       margin-right 8px
@@ -50,8 +71,8 @@
   h3
     color: #fff;
     font-weight 300
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 21px;
+    line-height: 24px;
 
 
 
@@ -62,7 +83,7 @@
       .article-posts
         &__footer
           background rgba(255,255,255, 1)
-          width 100%
+
     .article-posts
       &__categeory
         font-size 18px
@@ -73,6 +94,60 @@
         transition .55s
         background rgba(255,255,255, .9)
         padding 25px
+        width 100%
         h3
           color #333
           font-size 20px
+
+
+.related
+  justify-content center
+  .article-posts
+    margin 0 10px
+    height 410px
+    width 320px
+  .article-related
+    margin 0 10px
+
+.article-related
+  height 390px
+  width 290px
+  position relative
+  border-radius 5px
+  overflow hidden
+  a
+    &:before
+      content ''
+      position absolute
+      z-index 1
+      top 0
+      left 0
+      right 0
+      bottom 0
+      background rgba(54, 53, 21, 0.55)
+  &__category
+    margin-bottom 7px
+    span
+      text-transform uppercase
+      color #fff
+      font-size 13px
+      font-weight 300
+      letter-spacing 3px
+  &__header
+    height max-content
+    text-align center
+    position absolute
+    max-height 50px
+    top 0
+    bottom 0
+    left 0
+    right 0
+    margin auto
+    z-index 1
+    padding 50px 20px 0
+  h3
+    color #fff
+    font-size 21px
+    font-weight 600
+    line-height 24px
+    font-family Qanelas

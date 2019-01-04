@@ -32,9 +32,32 @@ mixin article-posts
           +icon('visibility')
       footer.article-posts__footer
         h3 2 авиабелета в германию туда-сюда за 999 руб 
+        
+mixin article-posts-pop
+  article.article-posts
+    a(href='fullstory.html')
+      img(src='images/full-content-1.jpg' alt='')
+      header.article-posts__header
+        .article-posts__categeory Куда 
+          span поехать
+        .article-posts__views.flex
+          span 1283
+          +icon('visibility')
+      footer.article-posts__footer
+        h3 2 авиабелета в германию туда-сюда за 999 руб 
 
 
+mixin article-related
+  article.article-related
+    a(href='fullstory.html')
+      img(src='images/full-content-2.jpg' alt='')
+      header.article-related__header
+        .article-related__category
+          span Куда поехать
+        h3 2 авиабелета в германию туда-сюда за 999 руб
+        
 
+         
 
 
 mixin article-book
