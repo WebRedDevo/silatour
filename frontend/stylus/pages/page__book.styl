@@ -1,0 +1,104 @@
+.book-page
+  &:before
+    content ''
+    background rgba(0, 0, 0, 0.63)
+    position fixed
+    top 0
+    left 0
+    right 0
+    bottom 0
+    z-index 1
+  &:after
+    content ''
+    position fixed
+    background url(../images/main-initial-bg.jpg) no-repeat
+    background-size cover
+    top 0
+    left 0
+    right 0
+    bottom 0
+  .initial-screen
+    position relative
+    margin-top 17%
+    margin auto
+    justify-content space-between
+    z-index 3
+    .name-cat
+      text-transform uppercase
+      color #333
+      background #ffeb7c
+      padding 4px 8px
+      font-size 13px
+      border-radius 1px
+      letter-spacing 3px
+      text-align center
+    .book__authors
+      color #333
+      margin-left -10px
+      margin-top 10px
+      span,a
+        font-weight 300
+        font-size 20px
+        margin-left 10px
+        margin-bottom 10px
+        display inline-block
+        color #333
+        border-bottom 1px solid
+    .book__keywords
+      a
+        color #333
+        border 1px solid
+        padding 8px 13px
+        font-weight 300
+        margin-right 6px
+        font-size 19px
+        border-radius 2px
+        display inline-block
+        margin-bottom 6px
+  h1
+    color #333
+    font-size 45px
+    font-weight 700
+    margin 15px 0 25px
+  &__poster
+    justify-content center
+    width calc(100% - 1080px)
+    position sticky
+    top 15%
+    height max-content
+    img
+      max-width 300px
+      border-radius 5px
+      max-height 525px
+  &__discription
+    background #ffffff
+    width 1080px
+    padding 65px 0 65px 75px
+    .wrap
+      padding-right 250px
+    .article-short-guidebook
+      max-width 100%
+      margin 0 0 20px
+      &__header
+        padding 50px 30px 50px
+    h2
+      color #333
+      font-size 26px
+      margin-bottom 15px
+      font-weight 500
+      margin-top 25px
+    .related
+      justify-content flex-start
+      .article-book
+        width 170px
+        height max-content
+        margin-bottom 10px
+        img
+          height 265px
+  &__content-info
+    margin 30px 0
+    p
+      font-size 19px
+      line-height 24px
+      font-weight 300
+      margin-bottom 20px

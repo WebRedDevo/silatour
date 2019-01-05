@@ -152,8 +152,8 @@ quality: 85
 });
 
 gulp.task('watch', function(){
-gulp.watch(['frontend/stylus/*.styl','frontend/stylus/inc/*.styl'],gulp.series('stylus'))
-gulp.watch(['frontend/pug/*.pug','frontend/pug/inc/*.pug'],gulp.series('pug'))
+gulp.watch(['frontend/stylus/*.styl','frontend/stylus/*/*.styl'],gulp.series('stylus'))
+gulp.watch(['frontend/pug/*.pug','frontend/pug/*/*.pug'],gulp.series('pug'))
 gulp.watch(['frontend/js/*.js','frontend/js/inc/*.js'],gulp.series('js:build'))
 });
  

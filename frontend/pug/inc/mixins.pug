@@ -12,7 +12,7 @@ mixin video-short
     
 mixin article-short-guidebook(title)
   article.article-short-guidebook
-    a(href='country-page.html' )
+    a(href='page__country.html' )
       img(src='images/norvigia-country.jpg' alt='').article-short-guidebook__img            
       header.article-short-guidebook__header
         img(src='images/svg/flags/norway-flag.svg' alt='').icon
@@ -22,7 +22,7 @@ mixin article-short-guidebook(title)
         
 mixin article-posts
   article.article-posts.article-posts--popular
-    a(href='fullstory.html')
+    a(href='page-journal__article.html')
       img(src='images/full-content-1.jpg' alt='')
       header.article-posts__header
         .article-posts__categeory Куда 
@@ -35,7 +35,7 @@ mixin article-posts
         
 mixin article-posts-pop
   article.article-posts
-    a(href='fullstory.html')
+    a(href='page-journal__article.html')
       img(src='images/full-content-1.jpg' alt='')
       header.article-posts__header
         .article-posts__categeory Куда 
@@ -49,7 +49,7 @@ mixin article-posts-pop
 
 mixin article-related
   article.article-related
-    a(href='fullstory.html')
+    a(href='page-journal__article.html')
       img(src='images/full-content-2.jpg' alt='')
       header.article-related__header
         .article-related__category
@@ -62,14 +62,14 @@ mixin article-related
 
 mixin article-book
   article.article-book
-    a(href='book-page.html')
+    a(href='page__book.html')
       img(src="images/book-img.jpg" alt='')
       span Книга
       h3 Путеводитель по грузии
       
 mixin main-post
   .post
-    a(href='fullstory.html').post__link
+    a(href='page-journal__article.html').post__link
       img(src='images/fullstory-wallpaper.jpg' alt='')
       header.post__header
         span.category Куда поехать

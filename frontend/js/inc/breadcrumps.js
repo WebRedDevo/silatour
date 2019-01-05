@@ -26,4 +26,9 @@ if(document.querySelector('.category--journal')){
 }
 if(document.querySelector('.main__posts')){
   document.querySelector('.main__posts-content p').after(speedbar);
+  document.querySelector('.header').classList.remove('white');
+}
+if(document.querySelector('.page__documents')){
+  document.querySelector('.page-text h1').before(speedbar);
+  document.querySelector('.header').classList.remove('white');
 }
