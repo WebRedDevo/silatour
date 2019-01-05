@@ -141,6 +141,11 @@ if (document.querySelector('.page__documents')) {
   document.querySelector('.page-text h1').before(speedbar);
   document.querySelector('.header').classList.remove('white');
 }
+
+if (document.querySelector('.category--reference-guide')) {
+  document.querySelector('.ref-guide__page h1').before(speedbar);
+  document.querySelector('.header').classList.remove('white');
+}
 "use strict";
 
 //checkbox Light Mode

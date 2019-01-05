@@ -1,0 +1,39 @@
+doctype html
+html(lang='ru')
+  head
+    meta(name='robots' content='none')
+    meta( charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover")
+    link( rel='stylesheet' href='css/style.min.css')
+    title Правила провоза багажа в самолете
+  body
+    include inc/header.pug
+    main.main.category.category--reference-guide
+        .speedbar
+          span 
+            a(href='#') Главная
+            |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+          span
+            a(href='#') Журнал
+            |&nbsp;&nbsp;‒&nbsp;&nbsp;
+          span
+            a(href='#') Советы
+            |&nbsp;&nbsp;‒&nbsp;&nbsp; 
+          span Правила провоза багажа в самолете 
+        .reference-guide.flex
+          aside.reference-guide__aside.flex
+              h6 Справочник туриста
+              ul.ref-guide__list
+                li.ref-guide__list-item
+                  a(href="#") Таблицы
+                li.ref-guide__list-item
+                  a(href="#") Разговориники 
+                li.ref-guide__list-item
+                  a(href="#") Важная информация
+          include page__phrasebook.pug
+              
+      
+    include inc/footer.pug
+
+            
+            
