@@ -134,6 +134,46 @@ input[type='submit'] + label
     border-bottom: 0;
 }
 
+.book__keywords a
+{
+    font-size: 1.0625rem;
+    font-weight: 300;
+
+    display: inline-block;
+
+    margin-right: 6px;
+    margin-bottom: 6px;
+    padding: 10px 13px;
+
+    transition: .33s;
+
+    color: #333;
+    border-radius: 2px;
+    background: #e9fbeb;
+}
+
+.book__keywords a:hover,
+.book__keywords a:focus
+{
+    background: #d1ecd4;
+}
+
+.button
+{
+    font: 1.0625rem/0.9375rem 'Qanelas-Regular';
+
+    display: inline-block;
+
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 15px 19px;
+
+    color: #2f2f2f;
+    border: 0;
+    border-radius: 4px;
+    background: #ffeb7c;
+}
+
 .navigation
 {
     width: 100%;
@@ -926,9 +966,18 @@ p a
 
     margin-top: 10px;
     margin-right: 100px;
-    margin-bottom: 40px;
 
     color: #fff;
+}
+
+.fullstory .initial-screen .social-share
+{
+    margin-top: 40px;
+}
+
+.fullstory .initial-screen .infos-article
+{
+    margin-top: 25px;
 }
 
 .fullstory .initial-screen .speedbar
@@ -977,6 +1026,18 @@ p a
     padding: 0 50px;
 
     color: #333;
+}
+
+.fullstory__content .book__keywords
+{
+    margin-top: 25px;
+    padding: 0 50px;
+}
+
+.fullstory__content .book__keywords a
+{
+    font-size: 1.0625rem;
+    line-height: 1.0625rem;
 }
 
 .fullstory__content h2
@@ -1104,22 +1165,6 @@ p a
 
     color: #333;
     border-bottom: 1px solid;
-}
-
-.book-page .initial-screen .book__keywords a
-{
-    font-size: 1.1875rem;
-    font-weight: 300;
-
-    display: inline-block;
-
-    margin-right: 6px;
-    margin-bottom: 6px;
-    padding: 8px 13px;
-
-    color: #333;
-    border: 1px solid;
-    border-radius: 2px;
 }
 
 .book-page h1
@@ -1291,7 +1336,7 @@ p a
 .country-page .initial-screen .container
 {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     padding: 6% 9%;
 
@@ -1318,7 +1363,7 @@ p a
 {
     font: 1.125rem 'Qanelas-Regular';
 
-    margin: 3px 0 28px;
+    margin: 3px 0;
 
     color: #fff;
 }
@@ -1329,8 +1374,15 @@ p a
     max-width: 65%;
 }
 
+.country-page .initial-screen__info .social-share
+{
+    margin-top: 20px;
+}
+
 .country-page .initial-screen__info .buttons
 {
+    margin-top: 28px;
+
     flex-wrap: wrap;
 }
 
@@ -1604,7 +1656,20 @@ p a
     align-items: center;
 }
 
-.section--map
+.section--map h2
+{
+    font-size: 2.25rem;
+    font-weight: 300;
+    line-height: 2.4375rem;
+
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+#map
 {
     height: 60vh;
 }
@@ -1615,6 +1680,11 @@ p a
 
     background: #f7f7f7;
     box-shadow: inset 0 0 25px rgba(0,0,0,.17);
+}
+
+.section--articles .article-book
+{
+    width: 235px;
 }
 
 .section--articles h2
@@ -1950,22 +2020,6 @@ p a
 
     max-width: 1280px;
     padding: 7%;
-}
-
-.ref-guide__page .initial-screen .info .button
-{
-    font: 1.0625rem/0.9375rem 'Qanelas-Regular';
-
-    display: inline-block;
-
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding: 15px 19px;
-
-    color: #2f2f2f;
-    border: 0;
-    border-radius: 4px;
-    background: #ffeb7c;
 }
 
 .ref-guide__page .initial-screen h1
@@ -2380,31 +2434,6 @@ h6
 .main__books .flex
 {
     flex-wrap: wrap;
-}
-
-.main .article-book
-{
-    width: 18%;
-    margin-right: 20px;
-    margin-bottom: 30px;
-}
-
-.main .article-book img
-{
-    max-height: 380px;
-    margin-bottom: 10px;
-
-    border-radius: 3px;
-}
-
-.main .article-book span
-{
-    color: #ccc;
-}
-
-.main .article-book h3
-{
-    color: #333;
 }
 
 .main-initial__tab
@@ -3335,6 +3364,31 @@ h6
     font: 600 1.3125rem/1.5rem Qanelas;
 
     color: #fff;
+}
+
+.article-book
+{
+    width: 18%;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.article-book img
+{
+    max-height: 380px;
+    margin-bottom: 10px;
+
+    border-radius: 3px;
+}
+
+.article-book span
+{
+    color: #ccc;
+}
+
+.article-book h3
+{
+    color: #333;
 }
 
 .night

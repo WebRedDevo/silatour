@@ -19,6 +19,20 @@ if(document.querySelector('.close') !== null){
   })
 }
 
+
+// удаляет секцию, если она пустая
+if(document.querySelector('.section--articles')){
+  if(document.querySelectorAll('.section--articles')[0].querySelector('article') === null){
+    document.querySelectorAll('.section--articles')[0].remove();
+  }
+}
+if(document.querySelector('.section--articles')){
+  if(document.querySelectorAll('.section--articles')[2].querySelector('article') === null){
+    document.querySelectorAll('.section--articles')[2].remove();
+  }
+}
+
+
 document.querySelector('html').classList.add('night');
 
 var lastScrolled = 0;

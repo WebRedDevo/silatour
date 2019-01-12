@@ -4,7 +4,7 @@
     timus = new Date(),
     timusHour = timus.getHours(),
     lightMode = document.getElementById('light-mode');
-    console.log(timus)
+    
   lightMode.addEventListener('change', function (){
     if(lightMode.checked === true){
       localStorage.setItem('lightMode','on');
